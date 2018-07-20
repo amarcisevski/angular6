@@ -84,30 +84,6 @@
               </div><!-- end .section-header -->
               <div class="section-body">
 
-
-                <link href="/BetterDay/Content/themes/static/css/fingerprint.css" rel="stylesheet">
-                <link href="/BetterDay/Content/themes/static/css/fingerprintStatus.css" rel="stylesheet">
-
-
-                <script type="text/javascript">
-                  jQuery(function () {
-                    logOn.init({
-                      logOnFormId: 'LogOnForm',
-                      logOnValidationSummaryId: 'LogOnValidationSummary',
-                      autoLogOn: 'False',
-                      usernameId: 'Username',
-                      username: '',
-                      passwordId: 'Password',
-                      password: '',
-                      returnUrlId: 'ReturnUrl',
-                      fingerprintGetBrowserHashSettingsUrl: "/BetterDay/Fingerprint/GetBrowserHashSettings",
-                      fingerprintSetBrowserHashSettingsUrl: "/BetterDay/Fingerprint/SetBrowserHashSettings",
-                      fingerprintIdentifyUrl: '/BetterDay/Fingerprint/Identify',
-                      fingerprintLogOnUrl: '/BetterDay/Account/FingerprintLogOn?username=_userName&password=_password'
-                    });
-                  });
-                </script>
-
                 <form action="/BetterDay/Account/LogOn" id="LogOnForm" method="post" novalidate="novalidate" _lpchecked="1">
                   <div class="section login">
                     <div class="validation-summary-valid" data-valmsg-summary="true" id="LogOnValidationSummary">
