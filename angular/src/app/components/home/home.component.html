@@ -2,33 +2,7 @@
   <div class="base_wrapper">
 
     <div id="outer-wrapper">
-      <div id="header">
-        <div id="header-container" class="squeeze">
-          <div id="header-left">
-            <div class="logo float-left"><a href="#"><img src="https://staging.betterdayhealth.net/BetterDay/Content/themes/static/Images/UIv2/logo.png" width="219" height="48" alt="Logo"></a></div><!-- end .logo -->
-            <div class="nav-area float-left">
-
-            </div><!-- end .nav-area -->
-          </div><!-- end #header-left -->
-          <div id="header-right">
-            <div class="support-col float-left">
-
-            </div><!-- end .support-col -->
-          </div><!-- end #header-right -->
-        </div><!-- end #header-container .big-squeeze -->
-      </div><!-- end #header -->
-
-
-      <div id="sub-header">
-        <div id="sub-header-container">
-          <div class="search-container float-left">
-
-          </div><!-- end .search-container -->
-          <div id="user-info" class="float-right">
-
-          </div><!-- end #user-info -->
-        </div><!-- end #sub-header-container -->
-      </div><!-- end #sub-header -->
+      
       <div id="main-content" class="squeeze">
         <div id="login-area">
           <div class="content-header">
@@ -60,67 +34,16 @@
 
           <div class="col-left">
             <div class="float-right">
-              <div class="largeButton" onclick="window.location='/BetterDay/Registration/Confirmation'">
+              <div class="largeButton" routerLink='/registrationConfirmation'>
                 <div class="helpButton" id="registrationHelpBtn"></div>
                 <div style="padding-top:8px;">
                   <div class="black24">Register as a New User</div>
                   <div class="lightGrey16" style="padding-top:10px;">If you do not have a Username/Password, <br>please click here to Register. </div>
                 </div>
               </div>
-              <div class="largeButton" style="margin-top: 20px;" onclick="window.location='/BetterDay/Account/PasswordRecovery'">
-                <div class="helpButton" id="passwordRecoveryHelpBtn"></div>
-                <div style="padding-top:8px;">
-                  <div class="black24">Password Recovery</div>
-                  <div class="lightGrey16" style="padding-top:10px;">If you need to recover your Password, <br>please click here.</div>
-                </div>
-              </div>
             </div>
           </div>
           <div class="col-right">
-            <div class="row">
-
-              <div class="section-header">
-                <h4 class="section-title">Login</h4>
-              </div><!-- end .section-header -->
-              <div class="section-body">
-
-                <form action="/BetterDay/Account/LogOn" id="LogOnForm" method="post" novalidate="novalidate" _lpchecked="1">
-                  <div class="section login">
-                    <div class="validation-summary-valid" data-valmsg-summary="true" id="LogOnValidationSummary">
-                      <ul>
-                        <li style="display:none"></li>
-                      </ul>
-                    </div>
-                    <table>
-                      <tbody>
-                        <tr>
-                          <td>
-                            <ul class="form-col">
-                              <li class="form-row">
-                                <label for="Username" style="font-size:14px" title="This field is required">Username *</label>
-
-
-                                <input class="string-field expanding-textarea" data-val="true" data-val-required="Field Username is required" id="Username" name="Username" title="Username" type="text" value="" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAXtJREFUOBGVUj2LwkAUnIjBICIIKe8gWKRKo2BvYXMgWNlYWZ3gn1B/htekibWVcH1aIVV+wQULCxsRtMrtrGYv8RLUB8nuvjczu+9DWywWH3EcL8X3jidM07QfAfucz+ffhJdeIZNwu+iLexoFnrr5Cr/+05xSOvBoX61WYdt2BvaSgGVZ6PV6+QKGYahApVKBKJY6p2PKeduUufb7fbTbbaxWKxwOB0ynU+x2O7ium4ndk3l+KYU8AW02m8UM8Jnn81limMLlcsnDK59IMRKHiXpBQibiEZkY0co3sSxlDegoMsdx0O12Ua/XEUUR1us1jsejhFNEvaBIgK07nU4IwxDNZhOdTicDLXO205OViYrDZrORLg5Qq9VSdUpwJSEwoUjiuF+FOEzTxGAwwH6/x3a7zUD+piXjBpLukDwej2XenufJdNLQhzUYjUao1WpoNBpywIbDYZqPwi6wz6xyEATQdV2ROKmJEVMoIECszdL3ffb7n5EsnJNf8S6HAZZBgLIAAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;" aria-required="true" aria-invalid="false" aria-describedby="Username-error Username-error">
-
-                              </li>
-                              <li class="form-row">
-                                <label for="Password" style="font-size:14px" title="This field is required">Password *</label>
-                                <input class="string-field expanding-textarea" data-val="true" data-val-required="Field Password is required" id="Password" name="Password" title="Password" type="password" value="" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAXtJREFUOBGVUj2LwkAUnIjBICIIKe8gWKRKo2BvYXMgWNlYWZ3gn1B/htekibWVcH1aIVV+wQULCxsRtMrtrGYv8RLUB8nuvjczu+9DWywWH3EcL8X3jidM07QfAfucz+ffhJdeIZNwu+iLexoFnrr5Cr/+05xSOvBoX61WYdt2BvaSgGVZ6PV6+QKGYahApVKBKJY6p2PKeduUufb7fbTbbaxWKxwOB0ynU+x2O7ium4ndk3l+KYU8AW02m8UM8Jnn81limMLlcsnDK59IMRKHiXpBQibiEZkY0co3sSxlDegoMsdx0O12Ua/XEUUR1us1jsejhFNEvaBIgK07nU4IwxDNZhOdTicDLXO205OViYrDZrORLg5Qq9VSdUpwJSEwoUjiuF+FOEzTxGAwwH6/x3a7zUD+piXjBpLukDwej2XenufJdNLQhzUYjUao1WpoNBpywIbDYZqPwi6wz6xyEATQdV2ROKmJEVMoIECszdL3ffb7n5EsnJNf8S6HAZZBgLIAAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
-
-                              </li>
-                            </ul>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-
-                    <div style="margin-top:16px; margin-right:1px;">
-                      <div class="row body-row toolbar"><a class="hhbutton submit " href="#" style="float:right" title="Login">Login</a>&nbsp;</div>
-                    </div>
-                  </div>
-                </form>
-              </div><!-- end .section-body -->
-            </div><!-- end .section -->
           </div><!-- end .row -->
         </div>
 

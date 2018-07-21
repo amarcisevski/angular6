@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
+import { RegConfirmationComponent } from './components/reg-confirmation/reg-confirmation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    RegConfirmationComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +29,10 @@ import { HomeComponent } from './components/home/home.component';
       {
         path: 'home',
         component: HomeComponent
+      },
+      {
+        path: 'registrationConfirmation',
+        component: RegConfirmationComponent
       }
     ])
   ],

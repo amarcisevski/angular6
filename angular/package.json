@@ -24,6 +24,7 @@
     "@progress/kendo-angular-l10n": "^1.2.0",
     "@progress/kendo-theme-default": "^2.54.0",
     "angularfire2": "^5.0.0-rc.4",
+    "cleanup-dependencies": "0.0.6",
     "core-js": "^2.5.4",
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.2.2",

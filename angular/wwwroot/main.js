@@ -104,12 +104,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_header_header_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/header/header.component */ "./src/app/components/header/header.component.ts");
 /* harmony import */ var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/footer/footer.component */ "./src/app/components/footer/footer.component.ts");
 /* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
+/* harmony import */ var _components_reg_confirmation_reg_confirmation_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/reg-confirmation/reg-confirmation.component */ "./src/app/components/reg-confirmation/reg-confirmation.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -128,7 +130,8 @@ var AppModule = /** @class */ (function () {
                 _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
                 _components_header_header_component__WEBPACK_IMPORTED_MODULE_6__["HeaderComponent"],
                 _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_7__["FooterComponent"],
-                _components_home_home_component__WEBPACK_IMPORTED_MODULE_8__["HomeComponent"]
+                _components_home_home_component__WEBPACK_IMPORTED_MODULE_8__["HomeComponent"],
+                _components_reg_confirmation_reg_confirmation_component__WEBPACK_IMPORTED_MODULE_9__["RegConfirmationComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -141,6 +144,10 @@ var AppModule = /** @class */ (function () {
                     {
                         path: 'home',
                         component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_8__["HomeComponent"]
+                    },
+                    {
+                        path: 'registrationConfirmation',
+                        component: _components_reg_confirmation_reg_confirmation_component__WEBPACK_IMPORTED_MODULE_9__["RegConfirmationComponent"]
                     }
                 ])
             ],
@@ -225,7 +232,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "                                                                                                                                                         <div id=\"header\">\r\n  <div id=\"header-container\" class=\"squeeze\">\r\n    <div id=\"header-left\">\r\n      <div class=\"logo float-left\"><a href=\"#\"><img src=\"https://staging.betterdayhealth.net/BetterDay/Content/themes/static/Images/UIv2/logo.png\" width=\"219\" height=\"48\" alt=\"Logo\"></a></div><!-- end .logo -->\r\n      <div class=\"nav-area float-left\">\r\n\r\n      </div><!-- end .nav-area -->\r\n    </div><!-- end #header-left -->\r\n    <div id=\"header-right\">\r\n      <div class=\"support-col float-left\">\r\n\r\n      </div><!-- end .support-col -->\r\n    </div><!-- end #header-right -->\r\n  </div><!-- end #header-container .big-squeeze -->\r\n</div><!-- end #header -->\r\n\r\n\r\n<div id=\"sub-header\">\r\n  <div id=\"sub-header-container\">\r\n    <div class=\"search-container float-left\">\r\n\r\n    </div><!-- end .search-container -->\r\n    <div id=\"user-info\" class=\"float-right\">\r\n\r\n    </div><!-- end #user-info -->\r\n  </div><!-- end #sub-header-container -->\r\n</div><!-- end #sub-header -->\r\n"
 
 /***/ }),
 
@@ -288,7 +295,7 @@ var HeaderComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n  <div class=\"base_wrapper\">\r\n\r\n    <div id=\"outer-wrapper\">\r\n      <div id=\"header\">\r\n        <div id=\"header-container\" class=\"squeeze\">\r\n          <div id=\"header-left\">\r\n            <div class=\"logo float-left\"><a href=\"#\"><img src=\"https://staging.betterdayhealth.net/BetterDay/Content/themes/static/Images/UIv2/logo.png\" width=\"219\" height=\"48\" alt=\"Logo\"></a></div><!-- end .logo -->\r\n            <div class=\"nav-area float-left\">\r\n\r\n            </div><!-- end .nav-area -->\r\n          </div><!-- end #header-left -->\r\n          <div id=\"header-right\">\r\n            <div class=\"support-col float-left\">\r\n\r\n            </div><!-- end .support-col -->\r\n          </div><!-- end #header-right -->\r\n        </div><!-- end #header-container .big-squeeze -->\r\n      </div><!-- end #header -->\r\n\r\n\r\n      <div id=\"sub-header\">\r\n        <div id=\"sub-header-container\">\r\n          <div class=\"search-container float-left\">\r\n\r\n          </div><!-- end .search-container -->\r\n          <div id=\"user-info\" class=\"float-right\">\r\n\r\n          </div><!-- end #user-info -->\r\n        </div><!-- end #sub-header-container -->\r\n      </div><!-- end #sub-header -->\r\n      <div id=\"main-content\" class=\"squeeze\">\r\n        <div id=\"login-area\">\r\n          <div class=\"content-header\">\r\n\r\n          </div><!-- end .content-header -->\r\n\r\n\r\n\r\n          <div id=\"registrationHelp\" title=\"Help - Register\" style=\"display:none\">\r\n            <p>\r\n              <span class=\"ui-icon ui-icon-circle-check\" style=\"float:left; margin:0 7px 50px 0;\"></span>\r\n              Registration Help Instructions\r\n            </p>\r\n            <p>Click this box to Register with the Better Day EHR.</p>\r\n            <p><a href=\"#\" class=\"darkGreyLink14\">Go To Customer Support</a></p>\r\n            <p><a href=\"#\" class=\"darkGreyLink14\">Chat with Customer Support</a></p>\r\n          </div>\r\n\r\n          <div id=\"passwordRecoveryHelp\" title=\"Help - Password Recovery\" style=\"display:none\">\r\n            <p>\r\n              <span class=\"ui-icon ui-icon-circle-check\" style=\"float:left; margin:0 7px 50px 0;\"></span>\r\n              Password Recovery Help Instructions\r\n            </p>\r\n            <p>Click this box to recover your password. You must have already Registered to recover your password.</p>\r\n            <p><a href=\"#\" class=\"darkGreyLink14\">Go To Customer Support</a></p>\r\n            <p><a href=\"#\" class=\"darkGreyLink14\">Chat with Customer Support</a></p>\r\n          </div>\r\n\r\n\r\n          <div class=\"col-left\">\r\n            <div class=\"float-right\">\r\n              <div class=\"largeButton\" onclick=\"window.location='/BetterDay/Registration/Confirmation'\">\r\n                <div class=\"helpButton\" id=\"registrationHelpBtn\"></div>\r\n                <div style=\"padding-top:8px;\">\r\n                  <div class=\"black24\">Register as a New User</div>\r\n                  <div class=\"lightGrey16\" style=\"padding-top:10px;\">If you do not have a Username/Password, <br>please click here to Register. </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"largeButton\" style=\"margin-top: 20px;\" onclick=\"window.location='/BetterDay/Account/PasswordRecovery'\">\r\n                <div class=\"helpButton\" id=\"passwordRecoveryHelpBtn\"></div>\r\n                <div style=\"padding-top:8px;\">\r\n                  <div class=\"black24\">Password Recovery</div>\r\n                  <div class=\"lightGrey16\" style=\"padding-top:10px;\">If you need to recover your Password, <br>please click here.</div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"col-right\">\r\n            <div class=\"row\">\r\n\r\n              <div class=\"section-header\">\r\n                <h4 class=\"section-title\">Login</h4>\r\n              </div><!-- end .section-header -->\r\n              <div class=\"section-body\">\r\n\r\n                <form action=\"/BetterDay/Account/LogOn\" id=\"LogOnForm\" method=\"post\" novalidate=\"novalidate\" _lpchecked=\"1\">\r\n                  <div class=\"section login\">\r\n                    <div class=\"validation-summary-valid\" data-valmsg-summary=\"true\" id=\"LogOnValidationSummary\">\r\n                      <ul>\r\n                        <li style=\"display:none\"></li>\r\n                      </ul>\r\n                    </div>\r\n                    <table>\r\n                      <tbody>\r\n                        <tr>\r\n                          <td>\r\n                            <ul class=\"form-col\">\r\n                              <li class=\"form-row\">\r\n                                <label for=\"Username\" style=\"font-size:14px\" title=\"This field is required\">Username *</label>\r\n\r\n\r\n                                <input class=\"string-field expanding-textarea\" data-val=\"true\" data-val-required=\"Field Username is required\" id=\"Username\" name=\"Username\" title=\"Username\" type=\"text\" value=\"\" autocomplete=\"off\" style=\"background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAXtJREFUOBGVUj2LwkAUnIjBICIIKe8gWKRKo2BvYXMgWNlYWZ3gn1B/htekibWVcH1aIVV+wQULCxsRtMrtrGYv8RLUB8nuvjczu+9DWywWH3EcL8X3jidM07QfAfucz+ffhJdeIZNwu+iLexoFnrr5Cr/+05xSOvBoX61WYdt2BvaSgGVZ6PV6+QKGYahApVKBKJY6p2PKeduUufb7fbTbbaxWKxwOB0ynU+x2O7ium4ndk3l+KYU8AW02m8UM8Jnn81limMLlcsnDK59IMRKHiXpBQibiEZkY0co3sSxlDegoMsdx0O12Ua/XEUUR1us1jsejhFNEvaBIgK07nU4IwxDNZhOdTicDLXO205OViYrDZrORLg5Qq9VSdUpwJSEwoUjiuF+FOEzTxGAwwH6/x3a7zUD+piXjBpLukDwej2XenufJdNLQhzUYjUao1WpoNBpywIbDYZqPwi6wz6xyEATQdV2ROKmJEVMoIECszdL3ffb7n5EsnJNf8S6HAZZBgLIAAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;\" aria-required=\"true\" aria-invalid=\"false\" aria-describedby=\"Username-error Username-error\">\r\n\r\n                              </li>\r\n                              <li class=\"form-row\">\r\n                                <label for=\"Password\" style=\"font-size:14px\" title=\"This field is required\">Password *</label>\r\n                                <input class=\"string-field expanding-textarea\" data-val=\"true\" data-val-required=\"Field Password is required\" id=\"Password\" name=\"Password\" title=\"Password\" type=\"password\" value=\"\" autocomplete=\"off\" style=\"background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAXtJREFUOBGVUj2LwkAUnIjBICIIKe8gWKRKo2BvYXMgWNlYWZ3gn1B/htekibWVcH1aIVV+wQULCxsRtMrtrGYv8RLUB8nuvjczu+9DWywWH3EcL8X3jidM07QfAfucz+ffhJdeIZNwu+iLexoFnrr5Cr/+05xSOvBoX61WYdt2BvaSgGVZ6PV6+QKGYahApVKBKJY6p2PKeduUufb7fbTbbaxWKxwOB0ynU+x2O7ium4ndk3l+KYU8AW02m8UM8Jnn81limMLlcsnDK59IMRKHiXpBQibiEZkY0co3sSxlDegoMsdx0O12Ua/XEUUR1us1jsejhFNEvaBIgK07nU4IwxDNZhOdTicDLXO205OViYrDZrORLg5Qq9VSdUpwJSEwoUjiuF+FOEzTxGAwwH6/x3a7zUD+piXjBpLukDwej2XenufJdNLQhzUYjUao1WpoNBpywIbDYZqPwi6wz6xyEATQdV2ROKmJEVMoIECszdL3ffb7n5EsnJNf8S6HAZZBgLIAAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;\">\r\n\r\n                              </li>\r\n                            </ul>\r\n                          </td>\r\n                        </tr>\r\n                      </tbody>\r\n                    </table>\r\n\r\n                    <div style=\"margin-top:16px; margin-right:1px;\">\r\n                      <div class=\"row body-row toolbar\"><a class=\"hhbutton submit \" href=\"#\" style=\"float:right\" title=\"Login\">Login</a>&nbsp;</div>\r\n                    </div>\r\n                  </div>\r\n                </form>\r\n              </div><!-- end .section-body -->\r\n            </div><!-- end .section -->\r\n          </div><!-- end .row -->\r\n        </div>\r\n\r\n\r\n      </div><!-- end #inner-wrapper -->\r\n\r\n\r\n    </div>\r\n    <div class=\"base_push\"></div>\r\n  </div>\r\n\r\n  <span id=\"popupNotification\"></span>\r\n\r\n  <style type=\"text/css\">\r\n    .bigYes {\r\n      width: 160px;\r\n    }\r\n\r\n    .ui-button-text-big {\r\n      color: #000000;\r\n      font-weight: bold;\r\n      font-size: 28px;\r\n    }\r\n  </style>\r\n\r\n  <span id=\"backToTopButton\">Back to Top</span>\r\n"
+module.exports = "\r\n  <div class=\"base_wrapper\">\r\n\r\n    <div id=\"outer-wrapper\">\r\n      \r\n      <div id=\"main-content\" class=\"squeeze\">\r\n        <div id=\"login-area\">\r\n          <div class=\"content-header\">\r\n\r\n          </div><!-- end .content-header -->\r\n\r\n\r\n\r\n          <div id=\"registrationHelp\" title=\"Help - Register\" style=\"display:none\">\r\n            <p>\r\n              <span class=\"ui-icon ui-icon-circle-check\" style=\"float:left; margin:0 7px 50px 0;\"></span>\r\n              Registration Help Instructions\r\n            </p>\r\n            <p>Click this box to Register with the Better Day EHR.</p>\r\n            <p><a href=\"#\" class=\"darkGreyLink14\">Go To Customer Support</a></p>\r\n            <p><a href=\"#\" class=\"darkGreyLink14\">Chat with Customer Support</a></p>\r\n          </div>\r\n\r\n          <div id=\"passwordRecoveryHelp\" title=\"Help - Password Recovery\" style=\"display:none\">\r\n            <p>\r\n              <span class=\"ui-icon ui-icon-circle-check\" style=\"float:left; margin:0 7px 50px 0;\"></span>\r\n              Password Recovery Help Instructions\r\n            </p>\r\n            <p>Click this box to recover your password. You must have already Registered to recover your password.</p>\r\n            <p><a href=\"#\" class=\"darkGreyLink14\">Go To Customer Support</a></p>\r\n            <p><a href=\"#\" class=\"darkGreyLink14\">Chat with Customer Support</a></p>\r\n          </div>\r\n\r\n\r\n          <div class=\"col-left\">\r\n            <div class=\"float-right\">\r\n              <div class=\"largeButton\" routerLink='/registrationConfirmation'>\r\n                <div class=\"helpButton\" id=\"registrationHelpBtn\"></div>\r\n                <div style=\"padding-top:8px;\">\r\n                  <div class=\"black24\">Register as a New User</div>\r\n                  <div class=\"lightGrey16\" style=\"padding-top:10px;\">If you do not have a Username/Password, <br>please click here to Register. </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"col-right\">\r\n          </div><!-- end .row -->\r\n        </div>\r\n\r\n\r\n      </div><!-- end #inner-wrapper -->\r\n\r\n\r\n    </div>\r\n    <div class=\"base_push\"></div>\r\n  </div>\r\n\r\n  <span id=\"popupNotification\"></span>\r\n\r\n  <style type=\"text/css\">\r\n    .bigYes {\r\n      width: 160px;\r\n    }\r\n\r\n    .ui-button-text-big {\r\n      color: #000000;\r\n      font-weight: bold;\r\n      font-size: 28px;\r\n    }\r\n  </style>\r\n\r\n  <span id=\"backToTopButton\">Back to Top</span>\r\n"
 
 /***/ }),
 
@@ -314,6 +321,7 @@ module.exports = ""
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -324,8 +332,10 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var HomeComponent = /** @class */ (function () {
-    function HomeComponent() {
+    function HomeComponent(router) {
+        this.router = router;
     }
     HomeComponent.prototype.ngOnInit = function () {
     };
@@ -335,9 +345,72 @@ var HomeComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./home.component.html */ "./src/app/components/home/home.component.html"),
             styles: [__webpack_require__(/*! ./home.component.scss */ "./src/app/components/home/home.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
     ], HomeComponent);
     return HomeComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/reg-confirmation/reg-confirmation.component.html":
+/*!*****************************************************************************!*\
+  !*** ./src/app/components/reg-confirmation/reg-confirmation.component.html ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div id=\"main-content\" class=\"squeeze\">\r\n  <div class=\"content-header\">\r\n\r\n  </div><!-- end .content-header -->\r\n  <div class=\"section-header\">\r\n    <h4 class=\"section-title\">New Patient Registration</h4>\r\n  </div><!-- end .section-header -->\r\n  <div class=\"row\">\r\n\r\n    <div class=\"section\">\r\n\r\n      <div class=\"section-body\">\r\n\r\n        <form action=\"/BetterDay/Registration/Confirmation\" method=\"post\" novalidate=\"novalidate\">\r\n          <p>\r\n            <b>\r\n              Please enter the Confirmation Code provided to you at the time you scheduled your appointment. It also should have been emailed to you.\r\n            </b>\r\n          </p>\r\n          <div class=\"validation-summary-valid\" data-valmsg-summary=\"true\" id=\"ValidationSummary\">\r\n            <ul>\r\n              <li style=\"display:none\"></li>\r\n            </ul>\r\n          </div>    <ul class=\"form-col\" style=\"margin: 30px 0\">\r\n            <li class=\"form-row\">\r\n              <label for=\"ConfirmationCode\" title=\"This field is required\">Confirmation Code *</label>\r\n\r\n\r\n              <input class=\"string-field expanding-textarea\" data-val=\"true\" data-val-required=\"Field Confirmation Code is required\" id=\"ConfirmationCode\" name=\"ConfirmationCode\" title=\"Confirmation Code\" value=\"\" autocomplete=\"off\" type=\"text\">\r\n\r\n              <a class=\"hhbutton submit \" href=\"#\" title=\"Validate\">Validate</a>\r\n              <a class=\"hhbutton\" href=\"#\" id=\"cancelButton\" title=\"Cancel\">Cancel</a>\r\n            </li>\r\n          </ul>\r\n        </form>\r\n      </div><!-- end .section-body -->\r\n    </div><!-- end .section -->\r\n  </div><!-- end .row -->\r\n\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/reg-confirmation/reg-confirmation.component.scss":
+/*!*****************************************************************************!*\
+  !*** ./src/app/components/reg-confirmation/reg-confirmation.component.scss ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/reg-confirmation/reg-confirmation.component.ts":
+/*!***************************************************************************!*\
+  !*** ./src/app/components/reg-confirmation/reg-confirmation.component.ts ***!
+  \***************************************************************************/
+/*! exports provided: RegConfirmationComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegConfirmationComponent", function() { return RegConfirmationComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var RegConfirmationComponent = /** @class */ (function () {
+    function RegConfirmationComponent() {
+    }
+    RegConfirmationComponent.prototype.ngOnInit = function () {
+    };
+    RegConfirmationComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-reg-confirmation',
+            template: __webpack_require__(/*! ./reg-confirmation.component.html */ "./src/app/components/reg-confirmation/reg-confirmation.component.html"),
+            styles: [__webpack_require__(/*! ./reg-confirmation.component.scss */ "./src/app/components/reg-confirmation/reg-confirmation.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], RegConfirmationComponent);
+    return RegConfirmationComponent;
 }());
 
 
