@@ -1,0 +1,898 @@
+<div class="section-header">
+  <h4 class="section-title">Demographics</h4>
+</div>
+<div class="row">
+
+  <div class="section">
+
+    <div class="section-body">
+
+
+      <link href="https://staging.betterdayhealth.net/BetterDay/Content/themes/static/css/overrides/Kendo/tooltip.css" rel="stylesheet">
+
+      <div style="text-align: left;">
+        <div class="instructionsCssClass"><span class="instructionsTitle">Instructions: </span><div class="instructionsText"> Please verify and update your information below. Fields with an asterisk(*) are required. Check the ‘I agree to the Terms of Service’ box and click ‘Save’ to continue.</div></div>
+        <form action="/BetterDay/Registration/Demographics" autocomplete="off" id="userForm" method="post" novalidate="novalidate" _lpchecked="1">
+          <div class="validation-summary-valid" data-valmsg-summary="true" id="ValidationSummary">
+            <ul>
+              <li style="display:none"></li>
+            </ul>
+          </div><input data-val="true" data-val-number="The field UserId must be a number." data-val-required="The UserId field is required." id="UserId" name="UserId" type="hidden" value="6963697" autocomplete="off"><input id="ConfirmationCode" name="ConfirmationCode" type="hidden" value="MZJ7TD" autocomplete="off"><input data-val="true" data-val-number="The field RegistrationId must be a number." data-val-required="The RegistrationId field is required." id="RegistrationId" name="RegistrationId" type="hidden" value="0" autocomplete="off">
+
+          <input data-val="true" data-val-number="The field ImageId must be a number." id="ImageId" name="ImageId" type="hidden" value="" autocomplete="off">
+
+          <div id="personImageDiv" class="prof-image float-left  cursor-pointer ">
+            <img id="PersonImage" class="imgborder" style="display: block; margin: 0 auto;" src="/BetterDay/Image/GetNewPersonImage?imageType=Preview" alt="profile-image">
+            <div class="imgbutton hideOnScroll" style="display: grid; text-align: center;">
+
+
+            </div>
+          </div><div class="col-left">
+            <ul class="form-col">
+              <li class="string-li-field form-row">
+                <label for="ConfirmationCode">Confirmation code: </label>
+                <span>MZJ7TD</span>
+
+              </li>
+              <li class="string-li-field form-row">
+                <label for="Username" title="This field is required">Username *</label>
+
+
+                <input class="string-field expanding-textarea" data-val="true" data-val-length="Field Username has to be not longer than 100 symbols" data-val-length-max="100" data-val-required="Field Username is required" id="Username" maxlength="100" name="Username" title="Username" type="text" value="" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;" aria-required="true" aria-invalid="false" aria-describedby="Username-error">
+              </li>
+              <!-- disables autocomplete -->
+              <input type="text" style="display:none" autocomplete="off">
+              <input type="password" name="autofilloff" style="display:none" autocomplete="off">
+              <li class="string-li-field form-row">
+                <label for="Password" title="This field is required">Password *</label>
+                <input class="string-field expanding-textarea" data-val="true" data-val-length="Password should be between 6 and 30 symbols." data-val-length-max="30" data-val-length-min="6" data-val-required="Field Password is required" id="Password" maxlength="30" name="Password" title="Password" type="password" value="" autocomplete="off" data-role="tooltip" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACIUlEQVQ4EX2TOYhTURSG87IMihDsjGghBhFBmHFDHLWwSqcikk4RRKJgk0KL7C8bMpWpZtIqNkEUl1ZCgs0wOo0SxiLMDApWlgOPrH7/5b2QkYwX7jvn/uc//zl3edZ4PPbNGvF4fC4ajR5VrNvt/mo0Gr1ZPOtfgWw2e9Lv9+chX7cs64CS4Oxg3o9GI7tUKv0Q5o1dAiTfCgQCLwnOkfQOu+oSLyJ2A783HA7vIPLGxX0TgVwud4HKn0nc7Pf7N6vV6oZHkkX8FPG3uMfgXC0Wi2vCg/poUKGGcagQI3k7k8mcp5slcGswGDwpl8tfwGJg3xB6Dvey8vz6oH4C3iXcFYjbwiDeo1KafafkC3NjK7iL5ESFGQEUF7Sg+ifZdDp9GnMF/KGmfBdT2HCwZ7TwtrBPC7rQaav6Iv48rqZwg+F+p8hOMBj0IbxfMdMBrW5pAVGV/ztINByENkU0t5BIJEKRSOQ3Aj+Z57iFs1R5NK3EQS6HQqF1zmQdzpFWq3W42WwOTAf1er1PF2USFlC+qxMvFAr3HcexWX+QX6lUvsKpkTyPSEXJkw6MQ4S38Ljdbi8rmM/nY+CvgNcQqdH6U/xrYK9t244jZv6ByUOSiDdIfgBZ12U6dHEHu9TpdIr8F0OP692CtzaW/a6y3y0Wx5kbFHvGuXzkgf0xhKnPzA4UTyaTB8Ph8AvcHi3fnsrZ7Wore02YViqVOrRXXPhfqP8j6MYlawoAAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+                <div class="showPasswordButton" title="Show Password" style="display: inline-block;"></div>
+              </li>
+              <li class="last string-li-field form-row">
+                <label for="ConfirmPassword" title="This field is required">Confirm password *</label>
+                <input class="string-field expanding-textarea" data-val="true" data-val-equalto="The new password and confirmation password do not match." data-val-equalto-other="*.Password" data-val-length="Password should be between 6 and 30 symbols." data-val-length-max="30" data-val-length-min="6" data-val-required="Field Confirm password is required" id="ConfirmPassword" maxlength="30" name="ConfirmPassword" title="Confirm password" type="password" value="" autocomplete="off" data-role="tooltip" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACIUlEQVQ4EX2TOYhTURSG87IMihDsjGghBhFBmHFDHLWwSqcikk4RRKJgk0KL7C8bMpWpZtIqNkEUl1ZCgs0wOo0SxiLMDApWlgOPrH7/5b2QkYwX7jvn/uc//zl3edZ4PPbNGvF4fC4ajR5VrNvt/mo0Gr1ZPOtfgWw2e9Lv9+chX7cs64CS4Oxg3o9GI7tUKv0Q5o1dAiTfCgQCLwnOkfQOu+oSLyJ2A783HA7vIPLGxX0TgVwud4HKn0nc7Pf7N6vV6oZHkkX8FPG3uMfgXC0Wi2vCg/poUKGGcagQI3k7k8mcp5slcGswGDwpl8tfwGJg3xB6Dvey8vz6oH4C3iXcFYjbwiDeo1KafafkC3NjK7iL5ESFGQEUF7Sg+ifZdDp9GnMF/KGmfBdT2HCwZ7TwtrBPC7rQaav6Iv48rqZwg+F+p8hOMBj0IbxfMdMBrW5pAVGV/ztINByENkU0t5BIJEKRSOQ3Aj+Z57iFs1R5NK3EQS6HQqF1zmQdzpFWq3W42WwOTAf1er1PF2USFlC+qxMvFAr3HcexWX+QX6lUvsKpkTyPSEXJkw6MQ4S38Ljdbi8rmM/nY+CvgNcQqdH6U/xrYK9t244jZv6ByUOSiDdIfgBZ12U6dHEHu9TpdIr8F0OP692CtzaW/a6y3y0Wx5kbFHvGuXzkgf0xhKnPzA4UTyaTB8Ph8AvcHi3fnsrZ7Wore02YViqVOrRXXPhfqP8j6MYlawoAAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+                <div class="showPasswordButton" title="Show Password" style="display: inline-block;"></div>
+              </li>
+            </ul>
+          </div><div class="col-right"><ul class="form-col"></ul></div>
+
+          <style type="text/css">
+            fieldset.elist label {
+              width: 132px;
+            }
+
+            .active {
+              margin: 6px;
+            }
+          </style>
+
+          <input data-val="true" data-val-required="The BasePersonDetailsDisplayType field is required." id="BasePersonDetailsDisplayType" name="BasePersonDetailsDisplayType" type="hidden" value="AllFields" autocomplete="off"><input data-val="true" data-val-number="The field PersonId must be a number." data-val-required="Field PersonId is required" id="PersonId" name="PersonId" type="hidden" value="6613522" autocomplete="off"><input data-val="true" data-val-required="The HideDeathDate field is required." id="HideDeathDate" name="HideDeathDate" type="hidden" value="True" autocomplete="off"><input data-val="true" data-val-number="The field ImageId must be a number." id="DriverLicense_ImageId" name="DriverLicense.ImageId" type="hidden" value="" autocomplete="off"><input data-val="true" data-val-required="The AllowEditReceiveAlerts field is required." id="AllowEditReceiveAlerts" name="AllowEditReceiveAlerts" type="hidden" value="False" autocomplete="off"><input data-val="true" data-val-length="Field MRN has to be not longer than 50 symbols" data-val-length-max="50" data-val-required="Field MRN is required" id="Mrn" name="Mrn" type="hidden" value="BD23063F6CY" autocomplete="off"><input data-val="true" data-val-required="The Receive Alerts field is required." id="ReceiveAlerts" name="ReceiveAlerts" type="hidden" value="False" autocomplete="off"><div class="col-left">
+            <ul class="form-col">
+              <li class="string-li-field form-row">
+                <label for="Mrn" title="This field is required">MRN *</label>
+                <span>BD23063F6CY</span>
+
+              </li>
+              <li class=" form-row">
+                <label for="Ssn" id="ssnLabel">Soc Sec # *</label>
+
+                <script type="text/javascript">
+    function removeSsnFormatting(value) {
+        value = value.replace(/\-/gi, '');
+        return value;
+    }
+                </script>
+
+
+                <div id="1ce6d1d0-8847-4b6e-8bba-263f59148edf">
+                  <div id="Ssnssncodearea">
+                    <input class="text-box single-line" data-val="true" data-val-regex="Invalid SSN Code first part format" data-val-regex-pattern="\d{3}" type="text" maxlength="3" id="Ssncodefirst" name="Ssncodefirst" value="" style="width:25px" autocomplete="off" aria-required="true" data-val-required="Field SSN Code first part is required" data-history=""> -
+                    <input class="text-box single-line" data-val="true" data-val-regex="Invalid SSN Code second part format" data-val-regex-pattern="\d{2}" type="text" maxlength="2" id="Ssncodesecond" name="Ssncodesecond" value="" style="width:20px" autocomplete="off" aria-required="true" data-val-required="Field SSN Code second part is required" data-history=""> -
+                    <input class="text-box single-line" data-val="true" data-val-regex="Invalid SSN Code third part format" data-val-regex-pattern="\d{4}" type="text" maxlength="4" id="Ssncodethird" name="Ssncodethird" value="" style="width:42px" autocomplete="off" aria-required="true" data-val-required="Field SSN Code third part is required" data-history="">
+                    <input data-val="true" data-val-length="Field Soc Sec # has to be not longer than 11 symbols" data-val-length-max="11" id="Ssn" name="Ssn" type="hidden" value="" autocomplete="off">
+                  </div>
+       
+                </div>
+                <input data-val="true" data-val-required="The Unknown field is required." id="SsnIsUnknown" name="SsnIsUnknown" tabindex="-1" type="checkbox" value="false" autocomplete="off"><input name="SsnIsUnknown" type="hidden" value="false" autocomplete="off">Unknown
+              </li>
+              <li class="clsfsalutation-li-field form-row">
+                <label for="ClsfSalutationId">Salutation</label>
+                <div class="dropdown">
+                  <select id="ClsfSalutationId" name="ClsfSalutationId" tabindex="-1">
+                    <option value=""></option>
+                    <option value="Mr">Mr</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Miss">Miss</option>
+                    <option value="Ms">Ms</option>
+                    <option value="Dr">Dr</option>
+                    <option value="Prof">Prof</option>
+                    <option value="Rev">Rev</option>
+                    <option value="Other">Other</option>
+                    <option value="Father">Father</option>
+                    <option value="Coach">Coach</option>
+                    <option value="Pastor">Pastor</option>
+                    <option value="Sister">Sister</option>
+                    <option value="Master">Master</option>
+                  </select>
+                </div>
+              </li>
+              <li class="string-li-field form-row">
+                <label for="FirstName" title="This field is required">First Name *</label>
+
+
+                <input class="string-field expanding-textarea" data-val="true" data-val-length="Field First Name has to be not longer than 35 symbols" data-val-length-max="35" data-val-required="Field First Name is required" id="FirstName" maxlength="35" name="FirstName" title="First Name" type="text" value="Etsets" autocomplete="off">
+              </li>
+              <li class="string-li-field form-row">
+                <label for="MiddleName">Middle Name</label>
+
+
+                <input class="string-field expanding-textarea" data-val="true" data-val-length="Field Middle Name has to be not longer than 35 symbols" data-val-length-max="35" id="MiddleName" maxlength="35" name="MiddleName" title="Middle Name" type="text" value="" autocomplete="off">
+              </li>
+              <li class="string-li-field form-row">
+                <label for="LastName" title="This field is required">Last Name *</label>
+
+
+                <input class="string-field expanding-textarea" data-val="true" data-val-length="Field Last Name has to be not longer than 35 symbols" data-val-length-max="35" data-val-required="Field Last Name is required" id="LastName" maxlength="35" name="LastName" title="Last Name" type="text" value="Etsets" autocomplete="off">
+              </li>
+              <li class="clsfnamesuffix-li-field form-row">
+                <label for="ClsfNameSuffixId">Name Suffix</label>
+                <div class="dropdown">
+                  <select id="ClsfNameSuffixId" name="ClsfNameSuffixId">
+                    <option value=""></option>
+                    <option value="II">II</option>
+                    <option value="III">III</option>
+                    <option value="Jr">Jr.</option>
+                    <option value="Sr">Sr.</option>
+                    <option value="BVM">B.V.M.</option>
+                    <option value="CFRE">CFRE</option>
+                    <option value="CLU">CLU</option>
+                    <option value="CPA">CPA</option>
+                    <option value="CSC">C.S.C.</option>
+                    <option value="CSJ">C.S.J.</option>
+                    <option value="DC">D.C.</option>
+                    <option value="DD">D.D.</option>
+                    <option value="DDS">D.D.S.</option>
+                    <option value="DMD">D.M.D.</option>
+                    <option value="DO">D.O.</option>
+                    <option value="DVM">D.V.M.</option>
+                    <option value="EdD">Ed.D.</option>
+                    <option value="Esq">Esq.</option>
+                    <option value="IV">IV</option>
+                    <option value="Inc">Inc.</option>
+                    <option value="JD">J.D.</option>
+                    <option value="LLD">LL.D.</option>
+                    <option value="Ltd">Ltd.</option>
+                    <option value="MD">M.D.</option>
+                    <option value="OD">O.D.</option>
+                    <option value="OSB">O.S.B.</option>
+                    <option value="PC">P.C.</option>
+                    <option value="PE">P.E.</option>
+                    <option value="PhD">Ph.D.</option>
+                    <option value="Ret">Ret.</option>
+                    <option value="RGS">R.G.S</option>
+                    <option value="RN">R.N.</option>
+                    <option value="RNC">R.N.C.</option>
+                    <option value="SHCJ">S.H.C.J.</option>
+                    <option value="SJ">S.J.</option>
+                    <option value="SNJM">S.N.J.M.</option>
+                    <option value="SSMO">S.S.M.O.</option>
+                    <option value="USA">USA</option>
+                    <option value="USAF">USAF</option>
+                    <option value="USAFR">USAFR</option>
+                    <option value="USAR">USAR</option>
+                    <option value="USCG">USCG</option>
+                    <option value="USMC">USMC</option>
+                    <option value="USMCR">USMCR</option>
+                    <option value="USN">USN</option>
+                    <option value="USNR">USNR</option>
+                    <option value="I">I</option>
+                    <option value="V">V</option>
+                    <option value="NP">NP</option>
+                  </select>
+                </div>
+              </li>
+              <li class="string-li-field form-row">
+                <label for="PreviousFirstName" title="This is your Birth Name. Specify this only if you have changed your First Name">Previous First Name</label>
+
+
+                <input class="string-field expanding-textarea" data-val="true" data-val-length="Field Previous First Name has to be not longer than 200 symbols" data-val-length-max="200" id="PreviousFirstName" maxlength="200" name="PreviousFirstName" title="Previous First Name" type="text" value="" autocomplete="off">
+              </li>
+              <li class="string-li-field form-row">
+                <label for="PreviousLastName" title="This is your Birth Name. Specify this only if you have changed your Last Name">Previous Last Name</label>
+
+
+                <input class="string-field expanding-textarea" data-val="true" data-val-length="Field Previous Last Name has to be not longer than 200 symbols" data-val-length-max="200" id="PreviousLastName" maxlength="200" name="PreviousLastName" title="Previous Last Name" type="text" value="" autocomplete="off">
+              </li>
+              <li class="datetime-li-field form-row">
+                <label for="DateOfBirth" title="This field is required">Date of Birth *</label>
+
+
+
+                <input class="datepicker hasDatepicker" data-val="true" data-val-date="The field Date of Birth must be a date." data-val-required="Field Date of Birth is required" id="DateOfBirth" name="DateOfBirth" title="--/--/----" type="text" value="7/2/2018" autocomplete="off"><button type="button" class="ui-datepicker-trigger" tabindex="-1"></button>
+              </li>
+              <li class="int64-li-field form-row">
+                <label for="DicBirthSexId" title="This field is required">Birth Sex *</label>
+                <div class="dropdown">
+                  <select data-val="true" data-val-number="The field Birth Sex must be a number." data-val-required="Field Birth Sex is required" id="DicBirthSexId" name="DicBirthSexId">
+                    <option value=""></option>
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                    <option selected="selected" value="3">Unknown</option>
+                  </select>
+                </div>
+              </li>
+              <li class="list1-li-field form-row">
+                <label for="DicGenderIdentityIds">What is your current gender identity?</label>
+                <select id="DicGenderIdentityIds" multiple="" name="DicGenderIdentityIds" style="display: none;">
+                  <option value=""></option>
+                  <option value="1">Identifies as Male</option>
+                  <option value="2">Identifies as Female</option>
+                  <option value="3">Female-to-Male (FTM)/Transgender Male/Trans Man</option>
+                  <option value="4">Male-to-Female (MTF)/Transgender Female/Trans Woman</option>
+                  <option value="5">Genderqueer, neither exclusively male nor female</option>
+                  <option has-edit-box="true" value="6">Additional gender category or other, please specify</option>
+                  <option selected="selected" value="7">Declined to Specify</option>
+                </select><span class="ui-dropdownchecklist ui-dropdownchecklist-selector-wrapper ui-widget" id="ddcl-DicGenderIdentityIds" style="display: inline-block; cursor: default; overflow: hidden;"><span class="ui-dropdownchecklist-selector ui-state-default" tabindex="0" style="display: inline-block; overflow: hidden; white-space: nowrap; width: 279px;"><span class="ui-dropdownchecklist-text" style="display: inline-block; white-space: nowrap; overflow: hidden; width: 244px;" title="Declined to Specify">Declined to Specify</span></span></span><div class="ui-dropdownchecklist ui-dropdownchecklist-dropcontainer-wrapper ui-widget" id="ddcl-DicGenderIdentityIds-ddw" style="position: absolute; left: -33000px; top: -33000px; height: 226px; width: 414px;"><div class="ui-dropdownchecklist-dropcontainer ui-widget-content" style="overflow-y: auto; height: 226px;"><div class="ui-dropdownchecklist-item ui-state-default" style="white-space: nowrap;"><input disabled="" type="checkbox" id="ddcl-DicGenderIdentityIds-i1" class="active" tabindex="0" index="1" value="1"><label for="ddcl-DicGenderIdentityIds-i1" class="ui-dropdownchecklist-text" style="cursor: default;">Identifies as Male</label></div><div class="ui-dropdownchecklist-item ui-state-default" style="white-space: nowrap;"><input disabled="" type="checkbox" id="ddcl-DicGenderIdentityIds-i2" class="active" tabindex="0" index="2" value="2"><label for="ddcl-DicGenderIdentityIds-i2" class="ui-dropdownchecklist-text" style="cursor: default;">Identifies as Female</label></div><div class="ui-dropdownchecklist-item ui-state-default" style="white-space: nowrap;"><input disabled="" type="checkbox" id="ddcl-DicGenderIdentityIds-i3" class="active" tabindex="0" index="3" value="3"><label for="ddcl-DicGenderIdentityIds-i3" class="ui-dropdownchecklist-text" style="cursor: default;">Female-to-Male (FTM)/Transgender Male/Trans Man</label></div><div class="ui-dropdownchecklist-item ui-state-default" style="white-space: nowrap;"><input disabled="" type="checkbox" id="ddcl-DicGenderIdentityIds-i4" class="active" tabindex="0" index="4" value="4"><label for="ddcl-DicGenderIdentityIds-i4" class="ui-dropdownchecklist-text" style="cursor: default;">Male-to-Female (MTF)/Transgender Female/Trans Woman</label></div><div class="ui-dropdownchecklist-item ui-state-default" style="white-space: nowrap;"><input disabled="" type="checkbox" id="ddcl-DicGenderIdentityIds-i5" class="active" tabindex="0" index="5" value="5"><label for="ddcl-DicGenderIdentityIds-i5" class="ui-dropdownchecklist-text" style="cursor: default;">Genderqueer, neither exclusively male nor female</label></div><div class="ui-dropdownchecklist-item ui-state-default" style="white-space: nowrap;"><input disabled="" type="checkbox" id="ddcl-DicGenderIdentityIds-i6" class="active" tabindex="0" index="6" value="6"><label for="ddcl-DicGenderIdentityIds-i6" class="ui-dropdownchecklist-text" style="cursor: default;">Additional gender category or other, please specify</label></div><div class="ui-dropdownchecklist-item ui-state-default" style="white-space: nowrap;"><input disabled="" type="checkbox" id="ddcl-DicGenderIdentityIds-i7" checked="checked" class="active" tabindex="0" index="7" value="7"><label for="ddcl-DicGenderIdentityIds-i7" class="ui-dropdownchecklist-text" style="cursor: default;">Declined to Specify</label></div></div></div>
+                <script type="text/javascript">$(function() { $.queryCurrentModal('#DicGenderIdentityIds').dropdownchecklist({cssClassInputValidationError: "input-validation-error",firstItemChecksAll: false, width:279, maxDropHeight: 320}); })</script>
+              </li>
+              <li class="string-li-field form-row" style="display: none;">
+                <label for="DicGenderIdentityOther">Other</label>
+
+
+                <input class="string-field expanding-textarea" data-val="true" data-val-length="Field Other has to be not longer than 40 symbols" data-val-length-max="40" id="DicGenderIdentityOther" maxlength="40" name="DicGenderIdentityOther" title="Other" type="text" value="" autocomplete="off">
+              </li>
+              <li class="int64-li-field form-row">
+                <label for="DicSexualOrientationId">Do you think of yourself as:</label>
+                <div class="dropdown">
+                  <select data-val="true" data-val-number="The field Sexual Orientation must be a number." id="DicSexualOrientationId" name="DicSexualOrientationId">
+                    <option value=""></option>
+                    <option value="1">Lesbian, gay or homosexual</option>
+                    <option value="2">Straight or heterosexual</option>
+                    <option value="3">Bisexual</option>
+                    <option has-edit-box="true" value="4">Something else, please describe</option>
+                    <option value="5">Don’t know</option>
+                    <option selected="selected" value="6">Declined to Specify</option>
+                  </select>
+                </div>
+              </li>
+              <li class="string-li-field form-row" style="display: none;">
+                <label for="DicSexualOrientationOther">Other</label>
+
+
+                <input class="string-field expanding-textarea" data-val="true" data-val-length="Field Other has to be not longer than 40 symbols" data-val-length-max="40" id="DicSexualOrientationOther" maxlength="40" name="DicSexualOrientationOther" title="Other" type="text" value="" autocomplete="off">
+              </li>
+              <li class=" form-row" style="display: none;">
+                <label for="IsPregnant">Is Pregnant</label>
+                <input data-val="true" data-val-required="The Is Pregnant field is required." id="IsPregnant" name="IsPregnant" type="checkbox" value="true" autocomplete="off"><input name="IsPregnant" type="hidden" value="false" autocomplete="off"><div id="DueDateDiv" style="display: none;">
+                  &nbsp;&nbsp;<label for="DueDate" style="width:auto; vertical-align:initial">Approx. Due Date</label>&nbsp;
+
+
+                  <input class="datepicker hasDatepicker" data-val="true" data-val-date="The field Approx. Due Date must be a date." id="DueDate" name="DueDate" title="--/--/----" type="text" value="" autocomplete="off"><button type="button" class="ui-datepicker-trigger" tabindex="-1"></button>
+                </div>
+                <span class="field-validation-valid" data-valmsg-for="IsPregnant" data-valmsg-replace="false">*</span><span class="field-validation-valid" data-valmsg-for="DueDate" data-valmsg-replace="false">*</span>
+              </li>
+              <li class="int64-li-field form-row">
+                <label for="DicMaritalStatusId">Marital Status</label>
+                <div class="dropdown">
+                  <select data-val="true" data-val-number="The field Marital Status must be a number." id="DicMaritalStatusId" name="DicMaritalStatusId">
+                    <option value=""></option>
+                    <option value="1">Annulled</option>
+                    <option value="2">Divorced</option>
+                    <option value="3">Interlocutory</option>
+                    <option value="4">Legally Separated</option>
+                    <option value="5">Married</option>
+                    <option value="6">Polygamous</option>
+                    <option value="7">Never Married</option>
+                    <option value="8">Domestic partner</option>
+                    <option value="9">unmarried</option>
+                    <option value="10">Widowed</option>
+                    <option value="11">Unknown</option>
+                    <option value="12">Declined to Specify</option>
+                    <option value="14">Failed</option>
+                  </select>
+                </div>
+              </li>
+              <li class="string-li-field form-row">
+                <label for="DriverLicense_Number">Driver License #</label>
+
+                <script type="text/javascript">$(function() { $('#DriverLicense_Number').filterInput('', { transformations: 'Uppercase' }); })</script>
+                <input class="string-field expanding-textarea" data-val="true" data-val-length="Field Driver License # has to be not longer than 25 symbols" data-val-length-max="25" id="DriverLicense_Number" maxlength="25" name="DriverLicense.Number" title="Driver License #" type="text" value="" autocomplete="off">
+              </li>
+              <li class="datetime-li-field form-row">
+                <label for="DriverLicense_IssueDate">Issue Date</label>
+
+
+
+                <input class="datepicker hasDatepicker" data-val="true" data-val-date="The field Issue Date must be a date." id="DriverLicense_IssueDate" name="DriverLicense.IssueDate" title="--/--/----" type="text" value="" autocomplete="off"><button type="button" class="ui-datepicker-trigger" tabindex="-1"></button>
+              </li>
+              <li class="datetime-li-field form-row">
+                <label for="DriverLicense_ExpirationDate">Expiration Date</label>
+
+
+
+                <input class="datepicker hasDatepicker" data-val="true" data-val-date="The field Expiration Date must be a date." id="DriverLicense_ExpirationDate" name="DriverLicense.ExpirationDate" title="--/--/----" type="text" value="" autocomplete="off"><button type="button" class="ui-datepicker-trigger" tabindex="-1"></button>
+              </li>
+              <li class="last clsfusstate-li-field form-row">
+                <label for="DriverLicense_ClsfUsStateId">License State</label>
+                <div class="dropdown">
+                  <select id="DriverLicense_ClsfUsStateId" name="DriverLicense.ClsfUsStateId">
+                    <option value=""></option>
+                    <option value="Alabama">Alabama</option>
+                    <option value="Alaska">Alaska</option>
+                    <option value="Arizona">Arizona</option>
+                    <option value="Arkansas">Arkansas</option>
+                    <option value="California">California</option>
+                    <option value="Colorado">Colorado</option>
+                    <option value="Connecticut">Connecticut</option>
+                    <option value="Delaware">Delaware</option>
+                    <option value="District_of_Columbia">District of Columbia</option>
+                    <option value="Florida">Florida</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Hawaii">Hawaii</option>
+                    <option value="Idaho">Idaho</option>
+                    <option value="Illinois">Illinois</option>
+                    <option value="Indiana">Indiana</option>
+                    <option value="Iowa">Iowa</option>
+                    <option value="Kansas">Kansas</option>
+                    <option value="Kentucky">Kentucky</option>
+                    <option value="Louisiana">Louisiana</option>
+                    <option value="Maine">Maine</option>
+                    <option value="Maryland">Maryland</option>
+                    <option value="Massachusetts">Massachusetts</option>
+                    <option value="Michigan">Michigan</option>
+                    <option value="Minnesota">Minnesota</option>
+                    <option value="Mississippi">Mississippi</option>
+                    <option value="Missouri">Missouri</option>
+                    <option value="Montana">Montana</option>
+                    <option value="Nebraska">Nebraska</option>
+                    <option value="Nevada">Nevada</option>
+                    <option value="New_Hampshire">New Hampshire</option>
+                    <option value="New_Jersey">New Jersey</option>
+                    <option value="New_Mexico">New Mexico</option>
+                    <option value="New_York">New York</option>
+                    <option value="North_Carolina">North Carolina</option>
+                    <option value="North_Dakota">North Dakota</option>
+                    <option value="Ohio">Ohio</option>
+                    <option value="Oklahoma">Oklahoma</option>
+                    <option value="Oregon">Oregon</option>
+                    <option value="Pennsylvania">Pennsylvania</option>
+                    <option value="Rhode_Island">Rhode Island</option>
+                    <option value="South_Carolina">South Carolina</option>
+                    <option value="South_Dakota">South Dakota</option>
+                    <option value="Tennessee">Tennessee</option>
+                    <option value="Texas">Texas</option>
+                    <option value="Utah">Utah</option>
+                    <option value="Vermont">Vermont</option>
+                    <option value="Virginia">Virginia</option>
+                    <option value="Washington">Washington</option>
+                    <option value="West_Virginia">West Virginia</option>
+                    <option value="Wisconsin">Wisconsin</option>
+                    <option value="Wyoming">Wyoming</option>
+                    <option value="American_Samoa">American Samoa</option>
+                    <option value="Guam">Guam</option>
+                    <option value="Puerto_Rico">Puerto Rico</option>
+                    <option value="US_Virgin_Islands">U.S. Virgin Islands</option>
+                    <option value="Multiple">Multiple</option>
+                    <option value="National">National</option>
+                  </select>
+                </div>
+              </li>
+            </ul>
+          </div><div class="col-right">
+            <ul class="form-col">
+              <li class="string-li-field form-row">
+                <label for="Address1" title="This field is required">Address1 *</label>
+
+
+                <input class="string-field expanding-textarea" data-val="true" data-val-length="Field Address1 has to be not longer than 100 symbols" data-val-length-max="100" data-val-required="Field Address1 is required" id="Address1" maxlength="100" name="Address1" title="Address1" type="text" value="aaaaaaa" autocomplete="off">
+              </li>
+              <li class="string-li-field form-row">
+                <label for="Address2">Address2</label>
+
+
+                <input class="string-field expanding-textarea" data-val="true" data-val-length="Field Address2 has to be not longer than 100 symbols" data-val-length-max="100" id="Address2" maxlength="100" name="Address2" title="Address2" type="text" value="" autocomplete="off">
+              </li>
+              <li class="addressmodel-li-field form-row">
+                <script src="/BetterDay/Scripts/harmonyhealth.address.js?v=1.0.532.e24aabe" type="text/javascript"></script>
+
+                <script type="text/javascript">
+    jQuery(function($) {
+        var addressId = "Address";
+        var getAddressUrl = '/BetterDay/Address/GetAddress';
+
+        initAddressControl(addressId, getAddressUrl);
+
+        getAddressZipCodeField(addressId).change(function () {
+            updateAddressData(addressId, getAddressUrl);
+        });
+
+        getAddressZipCodeField(addressId).keyup(function (e) {
+            var zipcodeFirstPart = getAddressZipCodeFirstField(addressId).val();
+            var zipcodeSecondPart = getAddressZipCodeSecondField(addressId).val();
+            if (zipcodeFirstPart.length == 5 && (zipcodeSecondPart.length == 0 || zipcodeSecondPart.length == 4)) {
+                e.stopImmediatePropagation();
+                var phoneFirstField = $('[id ^=Phone_Phone_][id $=first]');
+                phoneFirstField.focus();
+                reloadAddressData(addressId, getAddressUrl);
+            }
+            if (zipcodeFirstPart.length < 5) {
+                getAddressZipCodeFirstField(addressId).removeClass('input-validation-warning');
+                getAddressZipCodeSecondField(addressId).removeClass('input-validation-warning');
+            }
+        });
+    });
+                </script>
+
+
+
+                <div id="Address" class="addressForm">
+                  <input class="address-state-hidden-field" id="Address_ClsfUsStateId" name="Address.ClsfUsStateId" tabindex="-1" type="hidden" value="Virginia" autocomplete="off">
+
+                  <div class="col-left">
+                    <ul class="form-col">
+                      <li class="string-li-field form-row">
+                        <label for="Address_Zip" title="This field is required">Zip Code *</label>
+
+
+
+                        <div id="AddressZipzipcodearea">
+                          <input class="text-box single-line zipCode-first-field" data-val="true" data-val-regex="Invalid Zip Code first part format" data-val-regex-pattern="\d{5}" data-val-required="Field Zip Code first part is required" id="AddressZipcodefirst" name="AddressZipcodefirst" type="text" value="23423" style="width:45px" maxlength="5" pattern="[0-9]*" autocomplete="off" data-history=""> -
+                          <input class="text-box single-line zipCode-second-field" data-val="true" data-val-regex="Invalid Zip Code second part format" data-val-regex-pattern="\d{4}" id="AddressZipcodesecond" name="AddressZipcodesecond" type="text" value="" style="width:40px" maxlength="4" pattern="[0-9]*" autocomplete="off" data-history="">
+
+                          <input class="zipCode-hidden-field" data-val="true" data-val-length="Field Zip Code has to be not longer than 10 symbols" data-val-length-max="10" data-val-required="Field Zip Code is required" id="Address_Zip" name="Address.Zip" type="hidden" value="23423" autocomplete="off">
+                        </div>
+
+           
+                      </li>
+                      <li class="string-li-field form-row">
+                        <label for="Address_City">City</label>
+
+
+                        <input class="string-field expanding-textarea address-city-field" data-val="true" data-val-length="Field City has to be not longer than 50 symbols" data-val-length-max="50" id="Address_City" maxlength="50" name="Address.City" readonly="readonly" tabindex="-1" title="City" type="text" value="Quinby" autocomplete="off">
+                      </li>
+                      <li class="clsfusstate-li-field form-row">
+                        <label for="Address_ClsfUsStateId">State</label>
+                        <div class="dropdown">
+                          <select class="address-state-field" id="Address_ClsfUsStateId_Dropdown" name="Address.ClsfUsStateId" readonly="readonly" tabindex="-1" disabled="disabled">
+                            <option value=""></option>
+                            <option value="Alabama">Alabama</option>
+                            <option value="Alaska">Alaska</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="Arkansas">Arkansas</option>
+                            <option value="California">California</option>
+                            <option value="Colorado">Colorado</option>
+                            <option value="Connecticut">Connecticut</option>
+                            <option value="Delaware">Delaware</option>
+                            <option value="District_of_Columbia">District of Columbia</option>
+                            <option value="Florida">Florida</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Idaho">Idaho</option>
+                            <option value="Illinois">Illinois</option>
+                            <option value="Indiana">Indiana</option>
+                            <option value="Iowa">Iowa</option>
+                            <option value="Kansas">Kansas</option>
+                            <option value="Kentucky">Kentucky</option>
+                            <option value="Louisiana">Louisiana</option>
+                            <option value="Maine">Maine</option>
+                            <option value="Maryland">Maryland</option>
+                            <option value="Massachusetts">Massachusetts</option>
+                            <option value="Michigan">Michigan</option>
+                            <option value="Minnesota">Minnesota</option>
+                            <option value="Mississippi">Mississippi</option>
+                            <option value="Missouri">Missouri</option>
+                            <option value="Montana">Montana</option>
+                            <option value="Nebraska">Nebraska</option>
+                            <option value="Nevada">Nevada</option>
+                            <option value="New_Hampshire">New Hampshire</option>
+                            <option value="New_Jersey">New Jersey</option>
+                            <option value="New_Mexico">New Mexico</option>
+                            <option value="New_York">New York</option>
+                            <option value="North_Carolina">North Carolina</option>
+                            <option value="North_Dakota">North Dakota</option>
+                            <option value="Ohio">Ohio</option>
+                            <option value="Oklahoma">Oklahoma</option>
+                            <option value="Oregon">Oregon</option>
+                            <option value="Pennsylvania">Pennsylvania</option>
+                            <option value="Rhode_Island">Rhode Island</option>
+                            <option value="South_Carolina">South Carolina</option>
+                            <option value="South_Dakota">South Dakota</option>
+                            <option value="Tennessee">Tennessee</option>
+                            <option value="Texas">Texas</option>
+                            <option value="Utah">Utah</option>
+                            <option value="Vermont">Vermont</option>
+                            <option selected="selected" value="Virginia">Virginia</option>
+                            <option value="Washington">Washington</option>
+                            <option value="West_Virginia">West Virginia</option>
+                            <option value="Wisconsin">Wisconsin</option>
+                            <option value="Wyoming">Wyoming</option>
+                            <option value="American_Samoa">American Samoa</option>
+                            <option value="Guam">Guam</option>
+                            <option value="Puerto_Rico">Puerto Rico</option>
+                            <option value="US_Virgin_Islands">U.S. Virgin Islands</option>
+                            <option value="Multiple">Multiple</option>
+                            <option value="National">National</option>
+                          </select>
+                        </div>
+                      </li>
+                      <li class="last string-li-field form-row">
+                        <label for="Address_County">County</label>
+
+
+                        <input class="string-field expanding-textarea address-county-field" data-val="true" data-val-length="Field County has to be not longer than 50 symbols" data-val-length-max="50" id="Address_County" maxlength="50" name="Address.County" readonly="readonly" tabindex="-1" title="County" type="text" value="" autocomplete="off">
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="phonelistmodel-li-field form-row">
+                <label for="Phone" title="This field is required">Phones *</label>
+
+
+                <div id="2e89af8b-7ef5-4b6d-97e7-f3132e0758ce">
+                  <div id="Phone">
+                    <div id="phone_0" class="phoneInList" style="display: block;">
+                      <input data-val="true" data-val-number="The field Id must be a number." data-val-required="The Id field is required." id="Phone_Phone_0__Id" name="Phone.Phone[0].Id" type="hidden" value="149752" autocomplete="off">
+                      <input id="Phone_Phone_Index" name="Phone.Phone.Index" type="hidden" value="0" autocomplete="off">
+                      <div class="dropdown">
+                        <select data-val="true" data-val-required="The ClsfPhoneTypeId field is required." id="Phone_Phone_0__ClsfPhoneTypeId" name="Phone.Phone[0].ClsfPhoneTypeId" style="width:92px;" tabindex="-1">
+                          <option value="HomePhone">Home</option>
+                          <option value="WorkPhone">Work</option>
+                          <option selected="selected" value="MobilePhone">Mobile</option>
+                          <option value="Fax">Fax</option>
+                        </select>
+                      </div>
+                
+
+                      <div id="2c6e890f-0b0c-4a39-8a7c-1847dddfe9c3">
+                        <div class="" id="Phone_Phone_0__PhoneNumberphonearea">
+                          <input class=" text-box single-line" data-val="true" data-val-regex="Invalid Phone first part format" data-val-regex-pattern="\d{3}" data-val-required="Field Phone first part is required" type="text" id="Phone_Phone_0__PhoneNumberfirst" name="Phone.Phone[0].PhoneNumberfirst" value="546" style="width: 25px" maxlength="3" autocomplete="off" data-history=""> .
+                          <input class=" text-box single-line" data-val="true" data-val-regex="Invalid Phone second part format" data-val-regex-pattern="\d{3}" data-val-required="Field Phone second part is required" type="text" id="Phone_Phone_0__PhoneNumbersecond" name="Phone.Phone[0].PhoneNumbersecond" value="546" style="width: 25px" maxlength="3" autocomplete="off" data-history=""> .
+                          <input class=" text-box single-line" data-val="true" data-val-regex="Invalid Phone third part format" data-val-regex-pattern="\d{4}" data-val-required="Field Phone third part is required" type="text" id="Phone_Phone_0__PhoneNumberthird" name="Phone.Phone[0].PhoneNumberthird" value="5465" style="width: 33px" maxlength="4" autocomplete="off" data-history=""> Ext.
+                          <input class=" text-box single-line" data-val="true" type="text" id="Phone_Phone_0__PhoneNumberfourth" name="Phone.Phone[0].PhoneNumberfourth" value="" style="width: 33px" maxlength="4" tabindex="-1" autocomplete="off" data-history="">
+                          <input data-val="true" data-val-length="Field Phone has to be not longer than 14 symbols" data-val-length-max="14" data-val-required="Field Phone is required" id="Phone_Phone_0__PhoneNumber" name="Phone.Phone[0].PhoneNumber" type="hidden" value="4545454545" autocomplete="off">
+                        </div>
+         
+                      </div><a class="deletePhone imgiconbutton" href="#" title="Delete"><img alt="Delete" class="deleteImg" src="/BetterDay/Content/themes/static/Images/Design/remove.png"></a>
+
+                      <span></span>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div id="08b0f510-2ea2-42b8-9398-5d6180be1d48">
+                  <a class="addNewPhone imgiconbutton" href="#" id="addNewPhone" title="Add New"><img alt="Add New" class="addNewImg" src="/BetterDay/Content/themes/static/Images/Design/add.png"></a>
+                </div>
+
+      
+
+
+              </li>
+              <li class=" form-row">
+                <label for="ReceiveAlerts" title="I would like to receive alerts and reminders via text message (SMS) through my mobile carrier - carrier charges may apply.">Receive Alerts</label>
+                <input type="checkbox" disabled="disabled" autocomplete="off">
+
+              </li>
+              <li class="faxlisteditmodel-li-field form-row">
+                <label for="Fax">Fax</label>
+
+
+                <div id="c44f919c-d6f1-4d6b-ac82-e2624b779b5d">
+                  <div id="Fax">
+                  </div>
+                </div>
+
+
+                <div id="587dc998-9b84-4a5d-9fcb-ccf5c09ad844">
+                  <a class="addNewFax imgiconbutton" href="#" id="addNewFax" title="Add New"><img alt="Add New" class="addNewImg" src="/BetterDay/Content/themes/static/Images/Design/add.png"></a>
+                </div>
+
+              </li>
+              <li class=" form-row">
+                <label for="Email" id="emailLabel">Email</label>
+                <input class="text-box single-line" data-val="true" data-val-length="Field Email has to be not longer than 100 symbols" data-val-length-max="100" data-val-regex="The Email address is not valid." data-val-regex-pattern="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" id="Email" name="Email" type="email" value="" autocomplete="off" disabled="disabled">
+                <input checked="checked" data-val="true" data-val-required="The Unknown field is required." id="EmailIsUnknown" name="EmailIsUnknown" tabindex="-1" type="checkbox" value="true" autocomplete="off"><input name="EmailIsUnknown" type="hidden" value="false" autocomplete="off">Unknown
+              </li>
+              <li class=" form-row">
+                <label for="ConfirmEmail" id="confirmEmailLabel">Confirm Email</label>
+                <input class="text-box single-line" data-val="true" data-val-length="Field Confirm Email has to be not longer than 100 symbols" data-val-length-max="100" data-val-regex="The Email address is not valid." data-val-regex-pattern="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" id="ConfirmEmail" name="ConfirmEmail" type="email" value="" autocomplete="off" disabled="disabled">
+              </li>
+              <li class=" form-row">
+                <label for="DicRaceIds">Race *</label>
+
+
+     
+                <div id="fillInList-div-DicRaceIds" class="fillInList">
+
+
+                  <input id="DicRaceIds_FillInGroupedLookUp_Id" name="DicRaceIds.FillInGroupedLookUp.Id" type="hidden" value="" autocomplete="off">
+                  <input id="DicRaceIds_FillInGroupedLookUp_IdentificationType" name="DicRaceIds.FillInGroupedLookUp.IdentificationType" type="hidden" value="" autocomplete="off">
+                  <input id="DicRaceIds_FillInGroupedLookUp_Category" name="DicRaceIds.FillInGroupedLookUp.Category" type="hidden" value="" autocomplete="off">
+                  <span role="status" aria-live="polite" class="ui-helper-hidden-accessible">1 result is available, use up and down arrow keys to navigate.</span><input class="inline-search ui-autocomplete-input" id="DicRaceIds_FillInGroupedLookUp_Name" inputtype="groupedlookup" name="DicRaceIds.FillInGroupedLookUp.Name" title="" type="text" value="" autocomplete="off">
+                  <img src="/BetterDay/Content/Images/dynamicquerybuilder/ajax-loader.gif" alt="loader" id="DicRaceIds_FillInGroupedLookUp_NameLoader" style="display: none;">
+
+     
+                  <style type="text/css">
+                    .ui-autocomplete {
+                      height: auto;
+                      max-height: 500px;
+                      overflow-y: auto;
+                    }
+
+                      .ui-autocomplete li {
+                        font-size: 12px;
+                      }
+
+                        .ui-autocomplete li.grey {
+                          color: #595959;
+                        }
+
+                        .ui-autocomplete li a {
+                          line-height: 1.2 !important;
+                        }
+
+                    .ui-autocomplete-category {
+                      line-height: 1.2;
+                      cursor: pointer;
+                    }
+
+                      .ui-autocomplete-category span {
+                        position: relative;
+                        top: -1px;
+                      }
+
+                    .cat-item {
+                      display: none;
+                    }
+
+                      .cat-item a {
+                        margin-left: 25px !important;
+                      }
+
+                    ul.ui-autocomplete {
+                      background-color: white;
+                    }
+                  </style>
+                  <a id="button_DicRaceIds" class="hhbutton shortPadding btn-add btn-right" href="#" title="Add">Add</a>
+
+
+                  <div class="fillInListItems text-box" id="div_DicRaceIds">
+                    <ul id="ul_DicRaceIds"></ul>
+                    <span id="span_DicRaceIds" style="width:100%; padding:5px;">No items</span>
+                  </div>
+                </div>
+              </li>
+              <li class=" form-row">
+                <label for="DicEthnicityId">Ethnicity *</label>
+
+
+                <div id="fillInList-div-DicEthnicityIds" class="fillInList">
+
+
+                  <input id="DicEthnicityIds_FillInGroupedLookUp_Id" name="DicEthnicityIds.FillInGroupedLookUp.Id" type="hidden" value="" autocomplete="off">
+                  <input id="DicEthnicityIds_FillInGroupedLookUp_IdentificationType" name="DicEthnicityIds.FillInGroupedLookUp.IdentificationType" type="hidden" value="" autocomplete="off">
+                  <input id="DicEthnicityIds_FillInGroupedLookUp_Category" name="DicEthnicityIds.FillInGroupedLookUp.Category" type="hidden" value="" autocomplete="off">
+                  <span role="status" aria-live="polite" class="ui-helper-hidden-accessible">1 result is available, use up and down arrow keys to navigate.</span><input class="inline-search ui-autocomplete-input" id="DicEthnicityIds_FillInGroupedLookUp_Name" inputtype="groupedlookup" name="DicEthnicityIds.FillInGroupedLookUp.Name" title="" type="text" value="" autocomplete="off">
+                  <img src="/BetterDay/Content/Images/dynamicquerybuilder/ajax-loader.gif" alt="loader" id="DicEthnicityIds_FillInGroupedLookUp_NameLoader" style="display: none;">
+
+     
+                  <style type="text/css">
+                    .ui-autocomplete {
+                      height: auto;
+                      max-height: 500px;
+                      overflow-y: auto;
+                    }
+
+                      .ui-autocomplete li {
+                        font-size: 12px;
+                      }
+
+                        .ui-autocomplete li.grey {
+                          color: #595959;
+                        }
+
+                        .ui-autocomplete li a {
+                          line-height: 1.2 !important;
+                        }
+
+                    .ui-autocomplete-category {
+                      line-height: 1.2;
+                      cursor: pointer;
+                    }
+
+                      .ui-autocomplete-category span {
+                        position: relative;
+                        top: -1px;
+                      }
+
+                    .cat-item {
+                      display: none;
+                    }
+
+                      .cat-item a {
+                        margin-left: 25px !important;
+                      }
+
+                    ul.ui-autocomplete {
+                      background-color: white;
+                    }
+                  </style>
+                  <a id="button_DicEthnicityIds" class="hhbutton shortPadding btn-add btn-right" href="#" title="Add">Add</a>
+
+
+                  <div class="fillInListItems text-box" id="div_DicEthnicityIds">
+                    <ul id="ul_DicEthnicityIds"></ul>
+                    <span id="span_DicEthnicityIds" style="width:100%; padding:5px;">No items</span>
+                  </div>
+                </div>
+              </li>
+              <li class="fillinlist-li-field form-row">
+                <label for="DicReligiousAffiliationIds">Religious Affiliation</label>
+
+
+                <div id="fillInList-div-DicReligiousAffiliationIds" class="fillInList">
+
+
+                  <input id="DicReligiousAffiliationIds_FillInGroupedLookUp_Id" name="DicReligiousAffiliationIds.FillInGroupedLookUp.Id" type="hidden" value="" autocomplete="off">
+                  <input id="DicReligiousAffiliationIds_FillInGroupedLookUp_IdentificationType" name="DicReligiousAffiliationIds.FillInGroupedLookUp.IdentificationType" type="hidden" value="" autocomplete="off">
+                  <input id="DicReligiousAffiliationIds_FillInGroupedLookUp_Category" name="DicReligiousAffiliationIds.FillInGroupedLookUp.Category" type="hidden" value="" autocomplete="off">
+                  <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input class="inline-search ui-autocomplete-input" id="DicReligiousAffiliationIds_FillInGroupedLookUp_Name" inputtype="groupedlookup" name="DicReligiousAffiliationIds.FillInGroupedLookUp.Name" title="" type="text" value="" autocomplete="off">
+                  <img src="/BetterDay/Content/Images/dynamicquerybuilder/ajax-loader.gif" alt="loader" id="DicReligiousAffiliationIds_FillInGroupedLookUp_NameLoader" style="display: none;">
+
+      
+                  <style type="text/css">
+                    .ui-autocomplete {
+                      height: auto;
+                      max-height: 500px;
+                      overflow-y: auto;
+                    }
+
+                      .ui-autocomplete li {
+                        font-size: 12px;
+                      }
+
+                        .ui-autocomplete li.grey {
+                          color: #595959;
+                        }
+
+                        .ui-autocomplete li a {
+                          line-height: 1.2 !important;
+                        }
+
+                    .ui-autocomplete-category {
+                      line-height: 1.2;
+                      cursor: pointer;
+                    }
+
+                      .ui-autocomplete-category span {
+                        position: relative;
+                        top: -1px;
+                      }
+
+                    .cat-item {
+                      display: none;
+                    }
+
+                      .cat-item a {
+                        margin-left: 25px !important;
+                      }
+
+                    ul.ui-autocomplete {
+                      background-color: white;
+                    }
+                  </style>
+                  <a id="button_DicReligiousAffiliationIds" class="hhbutton shortPadding btn-add btn-right" href="#" title="Add">Add</a>
+
+
+                  <div class="fillInListItems text-box" id="div_DicReligiousAffiliationIds">
+                    <ul id="ul_DicReligiousAffiliationIds"></ul>
+                    <span id="span_DicReligiousAffiliationIds" style="width:100%; padding:5px;">No items</span>
+                  </div>
+                </div>
+              </li>
+              <li class="fillinlist-li-field form-row">
+                <label for="DicLanguageIds">Languages</label>
+
+
+                <div id="fillInList-div-DicLanguageIds" class="fillInList">
+
+
+                  <span id="DicLanguageIds_FillInLookUpbe730cf1-b2e8-462b-8499-efaee13390e5">
+
+                    <input id="DicLanguageIds_FillInLookUp" inputtype="Lookup" name="DicLanguageIds.FillInLookUp" type="hidden" value="" autocomplete="off">
+                    <input id="DicLanguageIds_FillInLookUp_IdStr" inputtype="Lookup" name="DicLanguageIds.FillInLookUp.IdStr" type="hidden" value="" autocomplete="off">
+                    <input id="DicLanguageIds_FillInLookUp_Type" inputtype="Lookup" name="DicLanguageIds.FillInLookUp.Type" type="hidden" value="" autocomplete="off">
+                    <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input class="inline-search ui-autocomplete-input" id="DicLanguageIds_FillInLookUp_Name" inputtype="lookupbox" name="DicLanguageIds.FillInLookUp.Name" title="" type="text" value="" autocomplete="off">
+
+                  </span>
+
+   
+                  <a id="button_DicLanguageIds" class="hhbutton shortPadding btn-add btn-right" href="#" title="Add">Add</a>
+
+
+                  <div class="fillInListItems text-box" id="div_DicLanguageIds">
+                    <ul id="ul_DicLanguageIds"></ul>
+                    <span id="span_DicLanguageIds" style="width:100%; padding:5px;">No items</span>
+                  </div>
+                </div>
+              </li>
+              <li class="lookup-li-field form-row">
+                <label for="PreferredLanguageId">Preferred Language</label>
+
+
+                <span id="PreferredLanguageId275215d3-3290-4d4e-aec3-fd23604cddf5">
+
+                  <input id="PreferredLanguageId" inputtype="Lookup" name="PreferredLanguageId" type="hidden" value="" autocomplete="off">
+                  <input id="PreferredLanguageId_IdStr" inputtype="Lookup" name="PreferredLanguageId.IdStr" type="hidden" value="" autocomplete="off">
+                  <input id="PreferredLanguageId_Type" inputtype="Lookup" name="PreferredLanguageId.Type" type="hidden" value="" autocomplete="off">
+                  <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input class="inline-search ui-autocomplete-input" id="PreferredLanguageId_Name" inputtype="lookupbox" name="PreferredLanguageId.Name" title="Preferred Language" type="text" value="" autocomplete="off">
+
+                </span>
+
+              </li>
+              <li class="last  form-row">
+                <a class="hhbutton" href="#" id="emergencyContactButtonId" style="display: none" title="Add Emergency Contact*">Add Emergency Contact*</a>
+              </li>
+            </ul>
+          </div>
+          <div class="clear"></div>			<p></p>
+          <div style="margin: 0 auto; text-align: center; line-height:40px;">
+            <div class="row">
+              <input data-val="true" data-val-required="Field I agree to Terms of Service* is required" id="Agree" name="Agree" type="checkbox" value="true" autocomplete="off"><input name="Agree" type="hidden" value="false" autocomplete="off">
+              <label for="Agree" style="width:280px">I agree to Terms of Service*</label>
+            </div>
+            <div class="row">
+              <div>
+                <input data-val="true" data-val-required="The Send the Terms of Service to my email address field is required." id="SendTermsOfServiceByEmail" name="SendTermsOfServiceByEmail" type="checkbox" value="true" autocomplete="off"><input name="SendTermsOfServiceByEmail" type="hidden" value="false" autocomplete="off">
+                <label for="SendTermsOfServiceByEmail" style="width:280px">Send the Terms of Service to my email address</label>
+              </div>
+              <div style="display: none;">
+                <label for="EmailForTermsOfService">Email *</label>
+
+
+                <input class="string-field expanding-textarea" data-val="true" data-val-length="Field Email * has to be not longer than 100 symbols" data-val-length-max="100" id="EmailForTermsOfService" maxlength="100" name="EmailForTermsOfService" title="Email *" type="text" value="" autocomplete="off">
+              </div>
+            </div>
+            <a class="hhbutton" href="#" id="saveButton" title="Save">Save</a>
+            <a class="hhbutton CancelButton" href="#" id="cancelButton" title="Cancel">Cancel</a>
+          </div>
+        </form>    <div id="CPTDisclaimer">
+          <p>CPT copyright 2017 American Medical Association. All rights reserved.</p>
+          <br>
+          <p>Fee schedules, relative value units, conversion factors and/or related components are not assigned by the AMA, are not part of CPT, and the AMA is not recommending their use.  The AMA does not directly or indirectly practice medicine or dispense medical services. The AMA assumes no liability for data contained or not contained herein.</p>
+          <br>
+          <p><strong>CPT is a registered trademark of the American Medical Association.</strong></p>
+        </div>
+
+      </div>
+
+      <script>
+	kendo.syncReady(function(){jQuery("#Password").kendoTooltip({"show":userData.passwordCheck,"position":"right","autoHide":false,"showOn":"focus","content":kendo.template(jQuery('#tooltip-template').html())});});
+      </script>
+
+      <script>
+	kendo.syncReady(function(){jQuery("#ConfirmPassword").kendoTooltip({"show":userData.passwordConfirmationCheck,"position":"right","autoHide":false,"showOn":"focus","content":kendo.template(jQuery('#tooltip-template').html())});});
+      </script>
+
+      <script id="tooltip-template" type="text/x-kendo-template">
+        <div class="custom-tooltip">
+          <p>
+            <h5>Your Password Must Have:</h5>
+            <input class="k-checkbox" disabled="disabled" id="charactersLength" name="charactersLength" type="checkbox" value="true" /><label class="k-checkbox-label" for="charactersLength">At Least 6 characters</label><input name="charactersLength" type="hidden" value="false" />
+          </p>
+          <p>
+            <h5>And All of the Following:</h5>
+            <input class="k-checkbox" disabled="disabled" id="uppercase" name="uppercase" type="checkbox" value="true" /><label class="k-checkbox-label" for="uppercase">Uppercase Letter</label><input name="uppercase" type="hidden" value="false" /><br>
+            <input class="k-checkbox" disabled="disabled" id="lowercase" name="lowercase" type="checkbox" value="true" /><label class="k-checkbox-label" for="lowercase">Lowercase Letter</label><input name="lowercase" type="hidden" value="false" /><br>
+            <input class="k-checkbox" disabled="disabled" id="number" name="number" type="checkbox" value="true" /><label class="k-checkbox-label" for="number">Number</label><input name="number" type="hidden" value="false" /><br>
+            <input class="k-checkbox" disabled="disabled" id="special" name="special" type="checkbox" value="true" /><label class="k-checkbox-label" for="special">Special Character(! ? - *  etc...)</label><input name="special" type="hidden" value="false" />
+            <div id='newPasswordMatchDiv'>
+              <hr><input class="k-checkbox" disabled="disabled" id="newPasswordMatch" name="newPasswordMatch" type="checkbox" value="true" /><label class="k-checkbox-label" for="newPasswordMatch">Matches New Password</label><input name="newPasswordMatch" type="hidden" value="false" />
+            </div>
+          </p>
+        </div>
+      </script>
+    </div><!-- end .section-body -->
+  </div><!-- end .section -->
+</div>

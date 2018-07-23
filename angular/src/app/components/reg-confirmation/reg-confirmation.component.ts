@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-reg-confirmation',
@@ -10,17 +11,17 @@ export class RegConfirmationComponent implements OnInit {
 
   public code : string;
 
-  constructor() {
-    this.code = "test";
+  constructor(private router: Router) {
+    this.code = "";
   }
 
   ngOnInit() {
   }
 
   onSubmit(f: NgForm) {
-    console.log(f.value);  // { first: '', last: '' }
-    console.log(f.valid);  // false
-    console.log("CODE: " + this.code);
+    if (f.valid && this.code.length > 0) {
+      this.router.navigate(['/demographics']);
+    }
   }
 
 }

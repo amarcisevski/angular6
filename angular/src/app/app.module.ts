@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { RegConfirmationComponent } from './components/reg-confirmation/reg-confirmation.component';
 import { InputsModule } from '@progress/kendo-angular-inputs';
+import { DemographicsComponent } from './components/demographics/demographics.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { InputsModule } from '@progress/kendo-angular-inputs';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    RegConfirmationComponent
+    RegConfirmationComponent,
+    DemographicsComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +39,10 @@ import { InputsModule } from '@progress/kendo-angular-inputs';
       {
         path: 'registrationConfirmation',
         component: RegConfirmationComponent
+      },
+      {
+        path: 'demographics',
+        component: DemographicsComponent
       }
     ]),
     InputsModule
