@@ -11,7 +11,7 @@
 
       <div class="section-body">
 
-        <form action="/BetterDay/Registration/Confirmation" method="post" novalidate="novalidate">
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate onsubmit="return false;">
           <p>
             <b>
               Please enter the Confirmation Code provided to you at the time you scheduled your appointment. It also should have been emailed to you.
@@ -25,11 +25,13 @@
             <li class="form-row">
               <label for="ConfirmationCode" title="This field is required">Confirmation Code *</label>
 
+              <kendo-textbox-container floatingLabel="Confirmation Code">
+                <input kendoTextBox [(ngModel)]="code" [ngModelOptions]="{standalone: true}" required />
+              </kendo-textbox-container>
 
-              <input class="string-field expanding-textarea" data-val="true" data-val-required="Field Confirmation Code is required" id="ConfirmationCode" name="ConfirmationCode" title="Confirmation Code" value="" autocomplete="off" type="text">
-
-              <a class="hhbutton submit " href="#" title="Validate">Validate</a>
-              <a class="hhbutton" href="#" id="cancelButton" title="Cancel">Cancel</a>
+              <button class="hhbutton submit " title="Validate">Validate</button>
+              <!--<button class="hhbutton">Validate</button>-->
+              <a class="hhbutton" href="" id="cancelButton" title="Cancel">Cancel</a>
             </li>
           </ul>
         </form>

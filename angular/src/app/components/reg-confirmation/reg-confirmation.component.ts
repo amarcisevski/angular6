@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-reg-confirmation',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegConfirmationComponent implements OnInit {
 
-  constructor() { }
+  public code : string;
+
+  constructor() {
+    this.code = "test";
+  }
 
   ngOnInit() {
+  }
+
+  onSubmit(f: NgForm) {
+    console.log(f.value);  // { first: '', last: '' }
+    console.log(f.valid);  // false
+    console.log("CODE: " + this.code);
   }
 
 }

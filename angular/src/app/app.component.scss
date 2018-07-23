@@ -1086,7 +1086,7 @@ button.add-button:hover {
   color: #333333;
 }
 
-a.hhbutton, .ui-widget-content a.hhbutton, input.hhbutton {
+a.hhbutton, .ui-widget-content a.hhbutton, input.hhbutton, button.hhbutton {
   line-height: 15px;
   text-decoration: none;
   -webkit-appearance: none;
@@ -1117,7 +1117,7 @@ a.hhbutton, .ui-widget-content a.hhbutton, input.hhbutton {
   display: inline-block;
 }
 
-a.hhbutton.gray {
+a.hhbutton.gray, button.hhbutton.gray {
   color: #3C404B;
   text-shadow: 0px 1px 1px #c2c2c2;
   border-top: 1px solid #FFF;
@@ -1131,7 +1131,7 @@ a.hhbutton.gray {
   box-shadow: 1px 0px 0px #c2c2c2, 0px 1px 0px #c2c2c2, -1px 0px 0px #c2c2c2, 0px -1px 0px #c2c2c2;
 }
 
-a.hhbutton.gray:hover {
+a.hhbutton.gray:hover, button.hhbutton.gray:hover {
   background: #bebebe;
   background: -moz-linear-gradient(top, #d3d3d3, #bebebe);
   background: -ms-linear-gradient(top, #d3d3d3, #bebebe);
@@ -2735,7 +2735,7 @@ select {
 }
 
 a.hhlink:hover,
-a:hover {
+a:hover, button:hover {
   color: #000;
 }
 
