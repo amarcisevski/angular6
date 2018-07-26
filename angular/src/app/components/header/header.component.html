@@ -16,6 +16,9 @@
 
 
 <div id="sub-header">
+  <a>{{greetMessage}}</a>
+  <p *ngIf="logout">Logout</p>
+  <p *ngIf="!logout">Login</p>
   <div id="sub-header-container">
     <div class="search-container float-left">
 

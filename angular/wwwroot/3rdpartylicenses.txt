@@ -90,10 +90,6 @@ MIT
 MIT
 MIT
 
-@angular/compiler@6.0.9
-MIT
-MIT
-
 @angular/core@6.0.9
 MIT
 MIT
@@ -102,15 +98,15 @@ MIT
 MIT
 MIT
 
-@angular/platform-browser-dynamic@6.0.9
-MIT
-MIT
-
 @angular/platform-browser@6.0.9
 MIT
 MIT
 
 @angular/router@6.0.9
+MIT
+MIT
+
+@ngrx/store@6.0.1
 MIT
 MIT
 

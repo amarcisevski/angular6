@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { StoreModule } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -13,8 +14,10 @@ import { RegConfirmationComponent } from './components/reg-confirmation/reg-conf
 import { InputsModule } from '@progress/kendo-angular-inputs';
 import { DemographicsComponent } from './components/demographics/demographics.component';
 
+import { reducers } from './store/reducers'
 
-@NgModule({
+@
+NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
@@ -28,6 +31,7 @@ import { DemographicsComponent } from './components/demographics/demographics.co
     FormsModule,
     BrowserAnimationsModule,
     ButtonsModule,
+    StoreModule.forRoot(reducers, null),
     RouterModule.forRoot([{
       path: '',
       component: HomeComponent
