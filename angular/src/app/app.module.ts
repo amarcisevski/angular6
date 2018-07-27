@@ -5,6 +5,10 @@ import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
+import { GridModule } from '@progress/kendo-angular-grid';
+import { DropDownListModule } from '@progress/kendo-angular-dropdowns';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -15,6 +19,8 @@ import { InputsModule } from '@progress/kendo-angular-inputs';
 import { DemographicsComponent } from './components/demographics/demographics.component';
 
 import { reducers } from './store/reducers'
+import { ProductsService } from './products.service';
+
 
 @
 NgModule({
@@ -29,9 +35,10 @@ NgModule({
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     ButtonsModule,
-    StoreModule.forRoot(reducers, null),
+    //StoreModule.forRoot(reducers, null),
     RouterModule.forRoot([{
       path: '',
       component: HomeComponent
@@ -49,9 +56,13 @@ NgModule({
         component: DemographicsComponent
       }
     ]),
-    InputsModule
+    InputsModule,
+    GridModule,
+    DropDownListModule
   ],
-  providers: [],
+  providers: [
+    ProductsService
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
