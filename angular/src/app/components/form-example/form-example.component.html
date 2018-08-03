@@ -1,0 +1,86 @@
+<div id="main-content" class="squeeze">
+  <div class="content-header">
+
+  </div><!-- end .content-header -->
+  <div class="section-header">
+    <h4 class="section-title">New Patient Registration</h4>
+  </div><!-- end .section-header -->
+  <div class="row">
+
+    <div class="section">
+
+      <div class="section-body">
+
+        <div class="validation-summary-valid" data-valmsg-summary="true" id="ValidationSummary">
+          <ul>
+            <li style="display:none"></li>
+          </ul>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate onsubmit="return false;">
+          <p>
+            <b>
+              Please enter the Confirmation Code provided to you at the time you scheduled your appointment. It also should have been emailed to you.
+            </b>
+          </p>
+          
+          <ul class="form-col" style="margin: 30px 0">
+            <li class="form-row">
+              <label for="ConfirmationCode" title="This field is required">{{confirmationCodeTitle}}</label>
+
+              <kendo-textbox-container floatingLabel="{{confirmationCodeFloatingLabel}}">
+                <input kendoTextBox [(ngModel)]="code" name="confirmationCode" required />
+              </kendo-textbox-container>
+
+              <br/><br/>
+              <input name="username" [(ngModel)]="userName" required/>
+
+              <button class="hhbutton submit " title="Validate">Validate</button>
+              <!--<button class="hhbutton">Validate</button>-->
+              <a class="hhbutton" href="" id="cancelButton" title="Cancel">Cancel</a>
+            </li>
+          </ul>
+        </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div><!-- end .section-body -->
+    </div><!-- end .section -->
+  </div><!-- end .row -->
+
+</div>

@@ -110,13 +110,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_reg_confirmation_reg_confirmation_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/reg-confirmation/reg-confirmation.component */ "./src/app/components/reg-confirmation/reg-confirmation.component.ts");
 /* harmony import */ var _progress_kendo_angular_inputs__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @progress/kendo-angular-inputs */ "./node_modules/@progress/kendo-angular-inputs/dist/es/index.js");
 /* harmony import */ var _components_demographics_demographics_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/demographics/demographics.component */ "./src/app/components/demographics/demographics.component.ts");
-/* harmony import */ var _products_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./products.service */ "./src/app/products.service.ts");
+/* harmony import */ var _components_form_example_form_example_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/form-example/form-example.component */ "./src/app/components/form-example/form-example.component.ts");
+/* harmony import */ var _products_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./products.service */ "./src/app/products.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -145,7 +147,8 @@ var AppModule = /** @class */ (function () {
                 _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_10__["FooterComponent"],
                 _components_home_home_component__WEBPACK_IMPORTED_MODULE_11__["HomeComponent"],
                 _components_reg_confirmation_reg_confirmation_component__WEBPACK_IMPORTED_MODULE_12__["RegConfirmationComponent"],
-                _components_demographics_demographics_component__WEBPACK_IMPORTED_MODULE_14__["DemographicsComponent"]
+                _components_demographics_demographics_component__WEBPACK_IMPORTED_MODULE_14__["DemographicsComponent"],
+                _components_form_example_form_example_component__WEBPACK_IMPORTED_MODULE_15__["FormExampleComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -169,6 +172,10 @@ var AppModule = /** @class */ (function () {
                     {
                         path: 'demographics',
                         component: _components_demographics_demographics_component__WEBPACK_IMPORTED_MODULE_14__["DemographicsComponent"]
+                    },
+                    {
+                        path: 'formExample',
+                        component: _components_form_example_form_example_component__WEBPACK_IMPORTED_MODULE_15__["FormExampleComponent"]
                     }
                 ]),
                 _progress_kendo_angular_inputs__WEBPACK_IMPORTED_MODULE_13__["InputsModule"],
@@ -176,7 +183,7 @@ var AppModule = /** @class */ (function () {
                 _progress_kendo_angular_dropdowns__WEBPACK_IMPORTED_MODULE_7__["DropDownListModule"]
             ],
             providers: [
-                _products_service__WEBPACK_IMPORTED_MODULE_15__["ProductsService"]
+                _products_service__WEBPACK_IMPORTED_MODULE_16__["ProductsService"]
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]]
         })
@@ -314,6 +321,80 @@ var FooterComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/form-example/form-example.component.html":
+/*!*********************************************************************!*\
+  !*** ./src/app/components/form-example/form-example.component.html ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div id=\"main-content\" class=\"squeeze\">\r\n  <div class=\"content-header\">\r\n\r\n  </div><!-- end .content-header -->\r\n  <div class=\"section-header\">\r\n    <h4 class=\"section-title\">New Patient Registration</h4>\r\n  </div><!-- end .section-header -->\r\n  <div class=\"row\">\r\n\r\n    <div class=\"section\">\r\n\r\n      <div class=\"section-body\">\r\n\r\n        <div class=\"validation-summary-valid\" data-valmsg-summary=\"true\" id=\"ValidationSummary\">\r\n          <ul>\r\n            <li style=\"display:none\"></li>\r\n          </ul>\r\n        </div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n        <form #f=\"ngForm\" (ngSubmit)=\"onSubmit(f)\" novalidate onsubmit=\"return false;\">\r\n          <p>\r\n            <b>\r\n              Please enter the Confirmation Code provided to you at the time you scheduled your appointment. It also should have been emailed to you.\r\n            </b>\r\n          </p>\r\n          \r\n          <ul class=\"form-col\" style=\"margin: 30px 0\">\r\n            <li class=\"form-row\">\r\n              <label for=\"ConfirmationCode\" title=\"This field is required\">{{confirmationCodeTitle}}</label>\r\n\r\n              <kendo-textbox-container floatingLabel=\"{{confirmationCodeFloatingLabel}}\">\r\n                <input kendoTextBox [(ngModel)]=\"code\" name=\"confirmationCode\" required />\r\n              </kendo-textbox-container>\r\n\r\n              <br/><br/>\r\n              <input name=\"username\" [(ngModel)]=\"userName\" required/>\r\n\r\n              <button class=\"hhbutton submit \" title=\"Validate\">Validate</button>\r\n              <!--<button class=\"hhbutton\">Validate</button>-->\r\n              <a class=\"hhbutton\" href=\"\" id=\"cancelButton\" title=\"Cancel\">Cancel</a>\r\n            </li>\r\n          </ul>\r\n        </form>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n      </div><!-- end .section-body -->\r\n    </div><!-- end .section -->\r\n  </div><!-- end .row -->\r\n\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/form-example/form-example.component.scss":
+/*!*********************************************************************!*\
+  !*** ./src/app/components/form-example/form-example.component.scss ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/form-example/form-example.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/components/form-example/form-example.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: FormExampleComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormExampleComponent", function() { return FormExampleComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var FormExampleComponent = /** @class */ (function () {
+    function FormExampleComponent(router) {
+        this.router = router;
+        this.confirmationCodeTitle = 'Confirmation Code *';
+        this.confirmationCodeFloatingLabel = 'Confirmation Code';
+        this.code = '';
+    }
+    FormExampleComponent.prototype.ngOnInit = function () {
+    };
+    FormExampleComponent.prototype.onSubmit = function (f) {
+        if (f.valid && this.code.length > 0) {
+            this.router.navigate(['/demographics']);
+        }
+    };
+    FormExampleComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-form-example',
+            template: __webpack_require__(/*! ./form-example.component.html */ "./src/app/components/form-example/form-example.component.html"),
+            styles: [__webpack_require__(/*! ./form-example.component.scss */ "./src/app/components/form-example/form-example.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
+    ], FormExampleComponent);
+    return FormExampleComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/components/header/header.component.html":
 /*!*********************************************************!*\
   !*** ./src/app/components/header/header.component.html ***!
@@ -386,7 +467,7 @@ var HeaderComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n  <div class=\"base_wrapper\">\r\n\r\n    <div id=\"outer-wrapper\">\r\n      \r\n      <div id=\"main-content\" class=\"squeeze\">\r\n        <div id=\"login-area\">\r\n          <div class=\"content-header\">\r\n\r\n          </div><!-- end .content-header -->\r\n\r\n\r\n          \r\n\r\n\r\n          <div id=\"registrationHelp\" title=\"Help - Register\" style=\"display:none\">\r\n            <p>\r\n              <span class=\"ui-icon ui-icon-circle-check\" style=\"float:left; margin:0 7px 50px 0;\"></span>\r\n              Registration Help Instructions\r\n            </p>\r\n            <p>Click this box to Register with the Better Day EHR.</p>\r\n            <p><a href=\"#\" class=\"darkGreyLink14\">Go To Customer Support</a></p>\r\n            <p><a href=\"#\" class=\"darkGreyLink14\">Chat with Customer Support</a></p>\r\n          </div>\r\n\r\n          <div id=\"passwordRecoveryHelp\" title=\"Help - Password Recovery\" style=\"display:none\">\r\n            <p>\r\n              <span class=\"ui-icon ui-icon-circle-check\" style=\"float:left; margin:0 7px 50px 0;\"></span>\r\n              Password Recovery Help Instructions\r\n            </p>\r\n            <p>Click this box to recover your password. You must have already Registered to recover your password.</p>\r\n            <p><a href=\"#\" class=\"darkGreyLink14\">Go To Customer Support</a></p>\r\n            <p><a href=\"#\" class=\"darkGreyLink14\">Chat with Customer Support</a></p>\r\n          </div>\r\n\r\n\r\n          <div class=\"col-left\">\r\n            <div class=\"float-right\">\r\n              <div class=\"largeButton\" routerLink='/registrationConfirmation'>\r\n                <div class=\"helpButton\" id=\"registrationHelpBtn\"></div>\r\n                <div style=\"padding-top:8px;\">\r\n                  <div class=\"black24\">Register as a New User</div>\r\n                  <div class=\"lightGrey16\" style=\"padding-top:10px;\">If you do not have a Username/Password, <br>please click here to Register. </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <kendo-grid\r\n            id=\"productsGrid\"\r\n            (cellClick)=\"cellClickHandler($event)\"\r\n            [groupable]=\"true\"\r\n            [group]=\"groups\"\r\n            (groupChange)=\"groupChange($event)\"\r\n            [data]=\"view\"\r\n            height=\"500\"\r\n            (add)=\"addHandler($event)\"\r\n          >\r\n            <ng-template kendoGridToolbarTemplate>\r\n              <button kendoGridAddCommand>Add new</button>\r\n              <button *ngIf=\"formGroup\"\r\n                      (click)=\"cancelHandler()\"\r\n                      class=\"k-button k-primary\">Cancel</button>\r\n            </ng-template>\r\n            <kendo-grid-column field=\"ProductName\" title=\"Product Name\"></kendo-grid-column>\r\n            <kendo-grid-column field=\"UnitPrice\" editor=\"numeric\" title=\"Price\"></kendo-grid-column>\r\n            <kendo-grid-column field=\"Discontinued\" editor=\"boolean\" title=\"Discontinued\"></kendo-grid-column>\r\n            <kendo-grid-column field=\"UnitsInStock\" editor=\"numeric\" title=\"Units In Stock\"></kendo-grid-column>\r\n          </kendo-grid>\r\n        </div>\r\n\r\n\r\n      </div><!-- end #inner-wrapper -->\r\n\r\n\r\n    </div>\r\n    <div class=\"base_push\"></div>\r\n  </div>\r\n\r\n  <span id=\"popupNotification\"></span>\r\n\r\n  <style type=\"text/css\">\r\n    .bigYes {\r\n      width: 160px;\r\n    }\r\n\r\n    .ui-button-text-big {\r\n      color: #000000;\r\n      font-weight: bold;\r\n      font-size: 28px;\r\n    }\r\n  </style>\r\n\r\n  <span id=\"backToTopButton\">Back to Top</span>\r\n"
+module.exports = "\r\n  <div class=\"base_wrapper\">\r\n\r\n    <div id=\"outer-wrapper\">\r\n      \r\n      <div id=\"main-content\" class=\"squeeze\">\r\n        <div id=\"login-area\">\r\n          <div class=\"content-header\">\r\n\r\n          </div><!-- end .content-header -->\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n          <span>{{message}}</span>\r\n          <br/><br/>\r\n          <button kendoButton (click)=\"Angular()\" [primary]=\"true\">My Kendo UI Button</button>\r\n          <br/><br/>\r\n          <button kendoButton (click)=\"AngularPlease()\" [primary]=\"true\">Your Kendo UI Button</button>\r\n          <br/><br/>\r\n          <a routerLink='/formExample'>form example</a>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n          <div id=\"registrationHelp\" title=\"Help - Register\" style=\"display:none\">\r\n            <p>\r\n              <span class=\"ui-icon ui-icon-circle-check\" style=\"float:left; margin:0 7px 50px 0;\"></span>\r\n              Registration Help Instructions\r\n            </p>\r\n            <p>Click this box to Register with the Better Day EHR.</p>\r\n            <p><a href=\"#\" class=\"darkGreyLink14\">Go To Customer Support</a></p>\r\n            <p><a href=\"#\" class=\"darkGreyLink14\">Chat with Customer Support</a></p>\r\n          </div>\r\n\r\n          <div id=\"passwordRecoveryHelp\" title=\"Help - Password Recovery\" style=\"display:none\">\r\n            <p>\r\n              <span class=\"ui-icon ui-icon-circle-check\" style=\"float:left; margin:0 7px 50px 0;\"></span>\r\n              Password Recovery Help Instructions\r\n            </p>\r\n            <p>Click this box to recover your password. You must have already Registered to recover your password.</p>\r\n            <p><a href=\"#\" class=\"darkGreyLink14\">Go To Customer Support</a></p>\r\n            <p><a href=\"#\" class=\"darkGreyLink14\">Chat with Customer Support</a></p>\r\n          </div>\r\n\r\n          <div class=\"col-left\">\r\n            <div class=\"float-right\">\r\n              <div class=\"largeButton\" routerLink='/registrationConfirmation'>\r\n                <div class=\"helpButton\" id=\"registrationHelpBtn\"></div>\r\n                <div style=\"padding-top:8px;\">\r\n                  <div class=\"black24\">Register as a New User</div>\r\n                  <div class=\"lightGrey16\" style=\"padding-top:10px;\">If you do not have a Username/Password, <br>please click here to Register. </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <kendo-grid\r\n            id=\"productsGrid\"\r\n            (cellClick)=\"cellClickHandler($event)\"\r\n            [groupable]=\"true\"\r\n            [group]=\"groups\"\r\n            (groupChange)=\"groupChange($event)\"\r\n            [data]=\"view\"\r\n            height=\"500\"\r\n            (add)=\"addHandler($event)\"\r\n          >\r\n            <ng-template kendoGridToolbarTemplate>\r\n              <button kendoGridAddCommand>Add new</button>\r\n              <button *ngIf=\"formGroup\"\r\n                      (click)=\"cancelHandler()\"\r\n                      class=\"k-button k-primary\">Cancel</button>\r\n            </ng-template>\r\n            <kendo-grid-column field=\"ProductName\" title=\"Product Name\"></kendo-grid-column>\r\n            <kendo-grid-column field=\"UnitPrice\" editor=\"numeric\" title=\"Price\"></kendo-grid-column>\r\n            <kendo-grid-column field=\"Discontinued\" editor=\"boolean\" title=\"Discontinued\"></kendo-grid-column>\r\n            <kendo-grid-column field=\"UnitsInStock\" editor=\"numeric\" title=\"Units In Stock\"></kendo-grid-column>\r\n          </kendo-grid>\r\n        </div>\r\n\r\n\r\n      </div><!-- end #inner-wrapper -->\r\n\r\n\r\n    </div>\r\n    <div class=\"base_push\"></div>\r\n  </div>\r\n\r\n  <span id=\"popupNotification\"></span>\r\n\r\n  <style type=\"text/css\">\r\n    .bigYes {\r\n      width: 160px;\r\n    }\r\n\r\n    .ui-button-text-big {\r\n      color: #000000;\r\n      font-weight: bold;\r\n      font-size: 28px;\r\n    }\r\n  </style>\r\n\r\n  <span id=\"backToTopButton\">Back to Top</span>\r\n"
 
 /***/ }),
 
@@ -445,6 +526,7 @@ var HomeComponent = /** @class */ (function () {
         this.router = router;
         this.service = service;
         this.renderer = renderer;
+        this.message = "your magical message";
         this.groups = [];
     }
     HomeComponent.prototype.ngOnInit = function () {
@@ -499,6 +581,12 @@ var HomeComponent = /** @class */ (function () {
             this.service.save(this.formGroup.value, this.isNew);
             this.closeEditor();
         }
+    };
+    HomeComponent.prototype.Angular = function () {
+        this.message = "DomNode visited this place";
+    };
+    HomeComponent.prototype.AngularPlease = function () {
+        this.message = "Boom babum - hot#$%";
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])(_progress_kendo_angular_grid__WEBPACK_IMPORTED_MODULE_3__["GridComponent"]),

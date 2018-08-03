@@ -25,6 +25,8 @@ export class HomeComponent implements OnInit {
   @ViewChild(GridComponent)
   private grid: GridComponent;
 
+  public message =  "your magical message";
+
   public groups: GroupDescriptor[] = [];
   public view: any[];
 
@@ -102,6 +104,14 @@ export class HomeComponent implements OnInit {
       this.service.save(this.formGroup.value, this.isNew);
       this.closeEditor();
     }
+  }
+
+  private Angular(): void {
+    this.message = "DomNode visited this place";
+  }
+
+  private AngularPlease(): void {
+    this.message = "Boom babum - hot#$%";
   }
 
 }

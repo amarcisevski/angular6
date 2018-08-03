@@ -17,6 +17,7 @@ import { HomeComponent } from './components/home/home.component';
 import { RegConfirmationComponent } from './components/reg-confirmation/reg-confirmation.component';
 import { InputsModule } from '@progress/kendo-angular-inputs';
 import { DemographicsComponent } from './components/demographics/demographics.component';
+import { FormExampleComponent } from './components/form-example/form-example.component';
 
 import { reducers } from './store/reducers'
 import { ProductsService } from './products.service';
@@ -30,7 +31,8 @@ NgModule({
     FooterComponent,
     HomeComponent,
     RegConfirmationComponent,
-    DemographicsComponent
+    DemographicsComponent,
+    FormExampleComponent
   ],
   imports: [
     BrowserModule,
@@ -54,6 +56,10 @@ NgModule({
       {
         path: 'demographics',
         component: DemographicsComponent
+      },
+      {
+        path: 'formExample',
+        component: FormExampleComponent
       }
     ]),
     InputsModule,
